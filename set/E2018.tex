@@ -1,0 +1,295 @@
+\eksamen{2018}
+\statistikk
+\oppgave
+Når $T\sim\mathrm{exp(\mu)}$ så er sannsynlighetstettheten gitt ved $f(t) = e^{-t/\mu}/\mu$. Det vil si at generelt
+\begin{utregning}
+	P(a < T < b) = \frac{1}{\mu}\int_{a}^b e^{-t/\mu}\dd t = e^{-a/\mu} - e^{-b/\mu}
+\end{utregning}
+Slik at
+\deloppgave
+\begin{likning}
+	P(T > 90) = P(90 < T < \infty) = e^{-6/5} \approx 0.3012
+\end{likning}
+\deloppgave
+\begin{likning}
+	P(50 < T < 90) = e^{-2/3} - e^{-6/5} \approx 0.2122
+\end{likning}
+\deloppgave
+\begin{likning}
+	P(T\geq 150 | T > 90) = \frac{P(T \geq 150 \cap T > 90)}{P(T > 90)} = \frac{P(T\geq 150)}{P(T > 90)} = \frac{e^{-2}}{e^{-6/5}} \approx 0.4493
+\end{likning}
+
+\deloppgave
+Vi har allerede fått oppgitt forventningen til populasjonen $\mu = 75$. Vi har da at
+\begin{likning}
+	\bar{T} = \frac{1}{20}\sum_{n = 1}^{20} T_n
+\end{likning}
+Og derfor
+\begin{likning}
+	E(\bar{T}) = \frac{1}{20}E\left(\sum_{n = 1}^{20} T_n\right)
+\end{likning}
+Siden $T_n$ er uavhengige og derfor
+\begin{likning}
+	E(\bar{T}) = \frac{1}{20} \sum_{n = 1}^{20} E(T_n)
+\end{likning}
+Siden hver av de målingene $T_n \sim \mathrm{exp}(\mu)$ så har vi at $E(T_n) = \mu$ for alle $n \in \mathbb Z_{21}\setminus{0}$. Dette gir
+\begin{likning}
+	E(\bar{T}) = \frac{1}{20}\cdot 20\mu = \mu
+\end{likning}
+
+\deloppgave
+Per definisjon av $\sd^2(\bar{T})$ så har vi
+\begin{utregning}
+	\sd^2(\bar{T}) &=& \sd^2\left(\frac{1}{20}\sum_{n=1}^{20} T_n\right)\\
+	&=& \frac{1}{400}\sd^2\left(\sum_{n=1}^{20} T_n\right)\\
+	&=& \frac{1}{400}\sd^2\sum_{n=1}^{20}\sd^2\left(\bar{T}\right)\\
+	&=& \frac{1}{400}\sd^2\sum_{n=1}^{20}\sigma^2\\
+	&=& \frac{1}{400}\cdot 20\mu^2 = \frac{\mu^2}{20}
+\end{utregning}
+Dette gir $\sd(\bar{T}) = \sqrt{\sd^2(\bar{T})} = 16.77$.
+
+\deloppgave
+Siden $n = 20$ er betraktlig stor nok kan vi utnytte sentral grenseteoremet og anta at $\bar{T}\sim N\left(E(\bar{T}), \sd(\bar{T})\right)$. Med dette, kan vi derfor finne $P(\bar{T} > 90) = 1 - P(\bar{T}\leq 90)$, hvor
+\begin{likning}
+	P(\bar{T}\leq 90) = P\left(\frac{\bar{T}-\mu}{\sigma/\sqrt{n}} \leq \frac{90-\mu}{\sigma/\sqrt{n}}\right) = \Phi\left(Z \leq 0.8944\right) = 0.8133 
+\end{likning}
+Dette gir $P\left(\bar{T} > 90\right) = 0.1867$.
+
+\deloppgave
+Dersom $\bar{T} \sim \mathrm{exp}(\mu)$ så må $E(\bar{T}) = \sd(\bar{T})$. Siden vi fant ut at den ikke var det (i.e. $\bar{T}$ er ikke eksponentialfordelt) så kan vi desverre ikke regne ut en eksakt verdi for $\prob{\bar{T} > 90}$ ved å bruke eksponentialfordelingen.
+
+\deloppgave
+Null-hypotesen formuleres først ut ifra mistanken til problemstillingen som har blitt presentert. Siden mistanken her er at $\mu > 60$ så blir dette formuleringen for $H_1$. Det naturlige blir da å formulere $H_0$ som en komplement av $H_1$ altså $H_0 = \mu \leq 60$.
+
+\deloppgave
+Her utfører vi en $T$-test fordi $\sigma$ er ukjent. Gitt $\bar{t} = 75.3$ og $s = 50.7$ for $n = 30$ målinger så har vi
+\begin{likning}
+	T = \frac{\bar{t} - \mu_0}{s/\sqrt{n}} = 1.653
+\end{likning}
+Vi har også fra tabellen at $T_\alpha^{n-1} = 1.311$. Siden $T > T_\alpha^{n-1}$ så må ingeniørene konkludere med en $\alpha = 0.1$ signifikant-nivå at det tilstrekkelig med grunnlag å forkaste $H_0$.
+
+\deloppgave
+For en $90\%$ konfidensintervall av en $T$-test er vi ute etter å finne $T_{\alpha/2}^{n-1} = 1.699$. Vi har derfor at konfidensintervallen til $\mu$ er
+\begin{likning}
+	\left[\bar{t} - T_{\alpha/2}^{n-1}\frac{s}{\sqrt{n}}, \bar{t} + T_{\alpha/2}^{n-1}\frac{s}{\sqrt{n}}\right] = [59.57, 91.03]
+\end{likning}
+
+\matte
+\oppgave
+\deloppgave
+Egenvierdiene $\lambda$ til en matrise $A$ er gitt ved å løse den karakteristiske likningen $\det(A-\lambda I) = 0$. Siden $A$ er en $2\times 2$-matrise kan vi benytte oss av at $\lambda_1 + \lambda_2 = \tr{A}$ og at $\lambda_1\lambda_2 = \det(A)$. Dette gir oss følgende:
+\begin{utregning}
+	\lambda_1 + \lambda_2 &=& 0\\
+	\lambda_1\lambda_2 &=& -1
+\end{utregning}
+Løser vi likningen oppgitt ovenfor får vi at $\lambda_1 = \pm 1$. Dette medfølger at $\lambda_2 = \mp 1$. 
+\newline
+
+La $\lambda_1 = -1$ og $\lambda_2 = 1$. Egenvektorene $\vec{v}_1$ og $\vec{v}_2$ til $A$ får vi av å løse likningen:
+\begin{likning}
+	(A-\lambda I)\vec{v} = \vec{0}
+\end{likning}
+Med $\lambda_1 = -1$ får vi at
+\begin{utregning}
+	\begin{pmatrix}
+		1 & 1\\
+		1 & 1
+	\end{pmatrix}&\sim&
+	\begin{pmatrix}
+		1 & 1\\
+		0 & 0
+	\end{pmatrix}
+\end{utregning}
+Dette gir oss $\vec{v}_1 = (1, -1)$. Ved samme argumentasjon for $\lambda_2 = 1$:
+\begin{utregning}
+	\begin{pmatrix}
+		-1 & 1\\
+		1 & -1
+	\end{pmatrix} \sim
+	\begin{pmatrix}
+		1 & -1\\
+		0 & 0
+	\end{pmatrix}
+\end{utregning}
+får vi at $\vec{v}_2 = (1, 1)$.
+
+\deloppgave
+Med egenverdiene og egenvektorene funnet i forrige oppgave kan vi danne matrisen $P$ og matrisen $D$ slik at vi kan uttrykke $A$ som $A = PDP\inverse$. Hvor
+\begin{likning}
+	P = \begin{pmatrix}
+		1 & 1\\
+		-1 & 1
+	\end{pmatrix} \implies P\inverse = \frac{1}{2}\begin{pmatrix}
+	1 & -1\\
+	1 & 1
+\end{pmatrix}
+\end{likning}
+og 
+\begin{likning}
+	D = \begin{pmatrix}
+		-1 & 0\\
+		0 & 1
+	\end{pmatrix}
+\end{likning}
+Dette gir oss
+\begin{likning}
+	A = \frac{1}{2}
+	\begin{pmatrix}
+		1 & 1\\
+		-1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		-1 & 0\\
+		0 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		1 & -1\\
+		1 & 1
+	\end{pmatrix}
+\end{likning}
+
+\deloppgave
+Omskriver vi systemet får vi 
+\begin{utregning}
+	x' &=& 0x + 1y\\
+	y' &=& 1x + 0y
+\end{utregning}
+Her ser vi helt klart at vi kan uttrykke likningssystemet som
+\begin{likning}
+	\vec{x}' = A\vec{x}
+\end{likning}
+der $A$ er matrisen oppgitt i oppgaven.
+
+Vi identifiserer at vi har et tilfelle av en homogent likning. For å løse dette må vi finne egenverdiene $\lambda$ og egenvektorene $\vec{v}$ til $A$. Dette har vi gjort tidligere. Systemet vil derfor ha en generell løsning gitt ved
+\begin{likning}
+	\vec{x} = c_1\vec{x}_1 + c_2\vec{x}_2
+\end{likning}
+hvor $c_1$ og $c_2$ er skalarer og 
+\begin{utregning}
+	\vec{x}_1 &=& \vec{v}_1 e^{\lambda_1 t}\\
+	\vec{x}_2 &=& \vec{v}_2 e^{\lambda_2 t}
+\end{utregning}
+Med egenverdiene for $\lambda_1$ og $\lambda_2$ og henholdsvis egenvektorene $\vec{v}_1$ og $\vec{v}_2$ som vi tidligere fant for matrise $A$ har vi derfor at løsningen for systemet av differensiallikninger er gitt ved
+\begin{utregning}
+	\vec{x} &=& c_1\begin{pmatrix}1\\-1\end{pmatrix}e^{-t} + c_2 \begin{pmatrix}
+		1 \\ 1
+	\end{pmatrix} e^t
+\end{utregning}
+Ved initialbetingelsen $\vec{x}(0) = (1 ,1)$ har vi derfor at
+\begin{utregning}
+	\begin{pmatrix}
+		1 & 1\\
+		-1 & 1
+	\end{pmatrix}\begin{pmatrix}
+	c_1\\
+	c_2
+\end{pmatrix} &=& \begin{pmatrix}
+	1\\1
+\end{pmatrix}\\
+\begin{pmatrix}
+	c_1\\c_2
+\end{pmatrix}
+&=& \frac{1}{2}\begin{pmatrix}
+	1 & -1\\
+	1 & 1
+\end{pmatrix}\begin{pmatrix}
+	1\\1
+\end{pmatrix} = \begin{pmatrix}
+0\\1
+\end{pmatrix}
+\end{utregning}
+Den partikulære løsningen er derfor
+\begin{likning}
+	\vec{x}_p = \begin{pmatrix}
+		1\\1
+	\end{pmatrix} e^t
+\end{likning}
+
+\oppgave
+\deloppgave
+\begin{enumerate}
+	\item Følgende rekke kan uttrykkes som
+	\begin{likning}
+		\sum_{n = 1}^\infty \left(\frac{1}{n} - \frac{1}{n+1}\right) = \sum_{n=1}^\infty \frac{1}{n(n+1)}
+	\end{likning}
+	Her kan vi bruke sammenligningstesten: La $b_n = \dfrac{1}{n^2}$ og la derfor $a_n = \dfrac{1}{n(n+1)}$. Vi har nå at $b_n \geq 0$ og $a_n \geq 0$. Videre har vi også at $b_n \geq a_n$ for alle $n \geq 1$. Vi kjenner igjen at $b_n$ er en $p$-rekke og konvergerer siden $p \geq 1$. Per sammenligningstesten så konvergerer også $a_n$, altså, rekken konvergerer.
+	
+	\item Her kan vi bruke forholdstesten: Med den gitte rekken har vi følgende:
+	\begin{likning}
+		a_n = \frac{n+1}{n+2}\frac{1}{2^n} \implies a_{n+1} = \frac{n+2}{n+3}\frac{1}{2^{n+1}} 
+	\end{likning}
+	Det er enkelt å se at
+	\begin{likning}
+		\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right| = \lim_{n\to\infty}\left|\frac{(n+2)^2}{2(n+3)(n+1)}\right| = \frac{1}{2}
+	\end{likning}
+	Vi har derfor per forholdstesten at rekken konvergerer absolutt.
+	
+	\item Her har vi en altererende følge. Dette tyder fort på at det er Dirichlets test vi må bruke. La $b_n = (-1)^n$ da har vi at $\left|\sum_{n = 1}^N b_n\right| \leq 1$ for alle $N$. La $a_n = 1/n$. Da har vi at $\sum_{n = 1}^{\infty} a_n \geq 0$, $a_i \geq a_{i+1}$ for alle $i\in\mathbb{N}_{>0}$ og $\lim_{n\to\infty} a_n = 0$. Da sier Dirichlets test at rekken $\sum_{n=1}^\infty b_na_n$ konvergerer. Så, den oppgitte rekken konvergerer.
+\end{enumerate}
+
+\deloppgave
+For en rekke $\sum_{n=0}^\infty b_n(x-c)^n$ så er konvergensradien $R$ definert som
+\begin{likning}
+	R\equiv \lim_{n\to\infty}\left|\frac{b_n}{b_{n+1}}\right|
+\end{likning}
+For den oppgitte rekken i oppgaven har vi at $b_n = (n+1)^2$ og $c = 0$. Dette gir
+\begin{likning}
+	R = \lim_{n\to\infty}\left|\frac{n+1}{n+2}\right|^2 = 1
+\end{likning}
+Konvergensradien $R$ for den oppgitte rekken er derfor $R = 1$.
+
+\deloppgave
+Vi skal finne Maclaurin rekken til $f(x) = x^2e^x + x$. Vi vet tidligere at Maclaurin rekken til $e^x$ er gitt ved:
+\begin{likning}
+	e^x = \sum_{n = 0}^\infty \frac{x^n}{n!}
+\end{likning}
+Det vil si at vi kan uttrykke $f(x)$ som 
+\begin{likning}
+	f(x) = x + x^2\sum_{n = 0}^\infty \frac{x^n}{n!} = x + \sum_{n = 0}^\infty \frac{x^{n+2}}{n!}
+\end{likning}
+
+\oppgave
+\deloppgave
+La $f\colon \mathbb R^n \to \mathbb R$ og la $\vec{u}$ være en vektor. Da er den retningsderiverte $D_{\vec{u}} f(\vec{r})$ av $f$ på punktet $\vec{r}\in\mathbb R^n$ i retningen til $\vec{u}$ gitt ved
+\begin{likning}
+	D_{\vec{u}}f(\vec{r}) = \indre{\nabla f(\vec{r})}{\frac{\vec{u}}{\norm{\vec{u}}}} 
+\end{likning}
+Gitt $g(x, y, z) = x^2 + y^2 + z^2$ så har vi:
+\begin{utregning}
+	\pdiff{g}{x} &=& 2x\\
+	\pdiff{g}{y} &=& 2y\\
+	\pdiff{g}{z} &=& 2z
+\end{utregning}
+med $\vec{r} = (1, 1, 1)$ så har vi $\nabla f(\vec{r}) = (2, 2, 2)$. Videre har vi at
+\begin{likning}
+	\frac{\vec{u}}{\norm{\vec{u}}} = \begin{pmatrix}
+		0\\1/\sqrt{2}\\1/\sqrt{2}
+	\end{pmatrix}
+\end{likning}
+Dette gir oss
+\begin{likning}
+	D_{\vec{u}}g(\vec{r}) = 2\sqrt{2}
+\end{likning}
+
+\deloppgave
+La $\vec{x} = (x, y, z)$ og la $\vec{r} = (1, 1, 1)$. Vi fant tidligere at $\nabla g(\vec{r}) = (2, 2, 2)$. Dette gir oss tangentplanet for nivåkurven $g(x, y, z) = 3$ gitt ved
+\begin{utregning}
+	\indre{\nabla g(\vec{r})}{\vec{x}-\vec{r}} &=& 0\\
+	2(x - 1) + 2(y - 1) + 2(z - 1) &=& 0\\
+	x + y + z &=& 3
+\end{utregning}
+
+\deloppgave
+Dersom et vilkårlig punkt $\vec{p}$ er et kritisk punkt for en funksjon $f(x, y z)$ så må det være slikt at $\nabla f(\vec{p}) = \vec{0}$. Dette ser vi tydelig fra tidligere beregnelse av $\nabla g(x, y z) = (2x, 2y, 2x)$. Det er klart her at $(0, 0, 0)$ er et kritisk punkt fordi $\nabla g(0, 0, 0) = (0, 0, 0)$. Det er også enkelt å se at dette er den eneste kritiske punktet siden det ikke er noen andre punkter som oppfyller kriteriet.
+
+Så, den eneste kritiske punktet vi har er $(0, 0, 0)$ for å identifisere hva slags kritisk punkt dette er bruker vi den 2. partielle derivative testen: Vi finner først Hessian matrisen $\mathcal{H}$ av $g$:
+\begin{likning}
+	\mathcal{H}(x, y, z) = \hessiantre{g} = \begin{pmatrix}
+		2 & 0 & 0\\
+		0 & 2 & 0\\
+		0 & 0 & 2
+	\end{pmatrix}
+\end{likning}
+Diskriminanten er her $D\equiv \det\left(\mathcal{H}(x, y, z)\right) = 8$. Vi ser også ifra matrisen at $\partial^2 g/\partial x^2 > 0$. Dette tilsier per andre partialle derivasjons testen at dette er et lokalt minimum.
+
+\clearpage

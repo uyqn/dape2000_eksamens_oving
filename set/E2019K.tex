@@ -1,0 +1,330 @@
+\eksamen{2019 (Kont)}
+\statistikk
+\oppgave
+\deloppgave
+For at $f(x)$ skal være en sannsynlighetsstetthet må den oppfylle følgende kritere:
+\begin{likning}
+	\int_{-\infty}^\infty f(x) \dd x = 1
+\end{likning}
+med den oppgitte $f(x)$ fra oppgaven har vi at:
+\begin{likning}
+	\int_{0}^2 \frac{1}{2}x + c \dd x = \left. \frac{1}{4}x^2 + cx \right|_0^2 = 1 + 2c = 1
+\end{likning}
+løser vi for $c$ får vi at $c = 0$.
+
+\deloppgave
+\begin{utregning}
+	P(X < 1) = \int_0^1 \frac{1}{2}x \dd x = \left. \frac{1}{4}x^2 \right|_0^1 = \frac{1}{4}
+\end{utregning}
+
+\deloppgave
+Per derfinisjon har vi at $P(X < 3/2 | X < 1) = P(X < 3/2 \cap X < 1)/P(X < 1)$. Siden $3/2 > 1$ så må $P(X < 3/2 \cap X < 1) = P(X < 1)$. Altså har vi at $P(X < 3/2 | X < 1) = 1$.
+
+\deloppgave
+Per definisjon på forventningsverdi $E(X)$:
+\begin{likning}
+	E(X) = \int_{-\infty}^\infty xf(x) \dd x = \int_0^2 \frac{1}{2}x^2 \dd x = \left. \frac{1}{6}x^3 \right|_0^2 = \frac{4}{3}
+\end{likning}
+
+\oppgave
+\deloppgave
+Sannsynligheten $P(XY \geq 1)$ blir oppfylt for $X = 1$ og $Y = 1$ eller $Y = 2$. Dette gir derfor $P(XY geq 1) = P(1, 1) + P(1, 2) = 0.35$.
+
+\deloppgave
+Bruker definisjon av forventningsverdi:
+\begin{utregning}
+	\mu_X &=& 0\cdot 0.4 + 1\cdot 0.6 = 0.6\\
+	\mu_Y &=& 0\cdot 0.3 + 1\cdot 0.4 + 2\cdot 0.3 = 1
+\end{utregning}
+
+\deloppgave
+Korrelasjonen er definert ved:
+\begin{likning}
+	\corr{X}{Y} = \frac{\cov{X}{Y}}{\sigma_X\sigma_Y}
+\end{likning}
+og kovariansen mellom $X$ og $Y$ er gitt ved:
+\begin{likning}
+	\cov{X}{Y} = E(XY) - \mu_X\mu_Y
+\end{likning}
+og igjen har vi at
+\begin{likning}
+	E(XY) = \sum_i\sum_j ijP(x_i, y_i) = 1\cdot 1\cdot P(1,1) + 1\cdot 2\cdot P(1, 2) = 0.6
+\end{likning}
+Med verdiene som vi fant tidligere har vi at $\rho(X, Y) = 0$.
+
+\deloppgave
+Variablene $X$ og $Y$ er ikke uavhengige fordi $P(0, 0) = 0.5$ mens $P(X = 0)P(Y = 0) = 0.12$ (i.e. $P(X, Y) \neq P(X)P(Y)$). 
+
+\oppgave
+\deloppgave
+Dersom $\lambda = 10$ (ms$\inverse$) så kan vi forvente å motta $1.5\lambda = 15$ på 1.5 ms. Siden $X$ er poisson fordelt så kan vi finne $P(X = 20)$ ved:
+\begin{likning}
+	P(X = 20) = \frac{15^20}{20!} e^{-15} \approx 0.04181
+\end{likning}
+
+\deloppgave
+La $T$ være ventetiden før neste datapakke ankommer svitsjen. Det vi nå ønsker å finne er $P(T > t)$ hvor $t = 0.3$. Ved komplement regelen har vi at $P(T > t) = 1 - P(T \leq t)$. Fra forelesning fant vi ut at $T$ i en poissonprosess er eksponentialtfordelt, så vi har at $P(T \leq t) = 1 - e^{-\lambda t}$. Dette gir oss $P(T > t) = e^{-\lambda t} \approx 0.0498$.
+
+\oppgave
+Siden vi skal finne en $99\%$ konfidensinterval trenger vi først å finne $z_{\alpha/2}$. Her må $\alpha = 1 - 0.99 = 0.01 \implies \alpha/2 = 0.005$. Slår vi opp i tabellen får vi at $z_{0.005} = 2.576$. Konfidensintervallen for $\mu$ blir derfor 
+$$
+\left[\bar{X} - z_{\alpha/2}\dfrac{\sigma}{\sqrt{n}}, \bar{X} + z_{\alpha/2}\dfrac{\sigma}{\sqrt{n}}\right]
+$$ 
+Med $\bar{X} = 17.5$, $\sigma = 3.45$ og $n = 5$ så har vi at det er $99\%$ sikkert at $\mu \in \left[13.526, 21.474\right]$
+
+\oppgave
+Oppgaven tyder på at den stokatistiske variabelen $X$ er binomisk fordelt med sannsynligheten $p = 2.84\cdot 10^{-9}$. Men, siden vi trenger bare å finne første gangen vedkommende inntreffer et vellykket knekket passord så blir det naturlig å at $X \sim \mathrm{Geom}(p)$. En geometrisk sannsynlighetsfordeling har en sannsynlighetstetthet oppgitt ved $P(X = x) = p(1-p)^{x-1}$. Forventningsverdien $E(X)$ til en geometrisk distribusjon er oppgitt som $E(X) = 1/p$. Dette kan vi bevise ved å bruke definisjonen for forventningsverdi:
+\begin{utregning}
+	E(X) = \sum_{x = 1}^\infty xP(X = x) = \sum_{x = 1}^\infty xp(1 - p)^{x-1}
+\end{utregning}
+Siden $p$ er en konstant kan vi faktorisere den ut av summasjonen:
+\begin{utregning}
+	\sum_{x = 1}^\infty xp(1 - p)^{x-1} = p\sum_{x = 1}^\infty x(1-p)^{x-1}
+\end{utregning}
+Siden $1 - p < 1$ så kan vi betrakte følgende geoemtrisk delsum:
+\begin{utregning}
+	\sum_{x = 1}^\infty (1-p)^x = \frac{1}{1 - (1-p)} - 1
+\end{utregning}
+Vi utfører en variabel bytte og la $\omega = 1-p$ da har vi at
+\begin{utregning}
+	\sum_{x = 1}^\infty \omega^x = \frac{1}{1-\omega} - 1
+\end{utregning}
+Vi deriverer begge sider med hensyn på $\omega$ og får:
+\begin{utregning}
+	\sum_{x = 1}^\infty x\omega^{x-1} = \frac{1}{(1-\omega)^2}
+\end{utregning}
+Siden vi har $\omega = 1 - p$ så har vi derfor at
+\begin{utregning}
+	\sum_{x = 1}^\infty x(1-p)^{x-1} = \frac{1}{p^2}
+\end{utregning}
+Forventningsverdien $E(X)$ er derfor
+\begin{likning}
+	E(X) = p\sum_{x = 1}^\infty x(1-p)^{x-1} = \frac{1}{p}
+\end{likning}
+Bruker vi verdien $p = 2.84\cdot 10^{-9}$ får vi at $E(X) = 352112676.1$
+
+\matte
+\oppgave
+\deloppgave
+Siden $B$ har to distinkte egenverdier $\lambda_1 \neq \lambda_2$ så vet vi at $B$ kan diagonaliseres og kan skrive som $B = PDP^{-1}$ hvor matrisen $D$ er gitt som:
+\begin{likning}
+	D = \begin{pmatrix}
+		\lambda_1 & 0\\
+		0 & \lambda_2
+	\end{pmatrix}
+\end{likning}
+Dette gir igjen da at
+\begin{utregning}
+	B^2 - 3B + 2I = PD^2P\inverse - 3PDP\inverse + 2I = 0
+\end{utregning}
+slik at
+\begin{utregning}
+	D^2P\inverse - 3DP\inverse + 2P\inverse I &=& P\inverse 0\\
+	D^2 - 3D + 2P\inverse I P &=& 0P\\
+	D^2 - 3D + 2I &=& 0
+\end{utregning}
+Dette gir oss følgende likningssystem:
+\begin{utregning}
+	\lambda_1^2 - 3\lambda_2 + 2 = (\lambda_1 - 2)(\lambda_1 - 1) = 0\\
+	\lambda_2^2 - 3\lambda_2 + 2 = (\lambda_2 - 2)(\lambda_2 - 1) = 0
+\end{utregning}
+Egenverdiene for $B$ er derfor $\lambda_1 = 2 \implies \lambda_2 = 1$ eller $\lambda_1 = 1 \implies \lambda_2 = 2$.
+
+\deloppgave
+Her har vi to måter å løse på. Enten så kan vi prøve å finne egenverdiene til $A$ og sammenligne de med de påståtte egenverdiene til $A$ eller så kan vi bruke at $\lambda_1 + \lambda_2 = \tr{A} = 4$ og $\lambda_1\lambda_2 = \det(A) = -8$.
+
+Dersom man skal finne egenverdiene til $A$ så kan vi starte med å løse $\det(A - \lambda I) = 0$ som gir oss:
+\begin{utregning}
+	\det(A - \lambda I) &=& (2-\lambda)^2 - 12\\
+	&=& (2 - \lambda)^2 - (2\sqrt{3})^2\\
+	&=& (2 - \lambda - 2\sqrt{3})(2 - \lambda + 2\sqrt{3}) = 0
+\end{utregning}
+Herifra er det enkelt å se at $\lambda = 2 \pm 2\sqrt{3} = 2(1 \pm \sqrt{3})$. Som stemmer overens med det som har blitt oppgitt i oppgaven.
+
+Dersom vi skulle gå for den andre metoden har vi at
+\begin{utregning}
+	\lambda_1 + \lambda_2 = 2 - 2\sqrt{3} + 2+2\sqrt{3} = 4 
+\end{utregning}
+og
+\begin{utregning}
+	\lambda_1\lambda_2 = (2-2\sqrt{3})(2+2\sqrt{3}) = 2^2 - 12 = -8
+\end{utregning}
+Som også stemmer overens med det vi har fått oppgitt.
+
+\deloppgave
+Nå som vi har egenverdiene for $A$ så kan vi finne egenvektorene ved å løse $A - \lambda I$.
+
+La $\lambda_1 = 2(1 - \sqrt{3})$ da har vi
+\begin{utregning}
+	\begin{pmatrix}
+		2 - 2(1 - \sqrt{3}) & 6\\
+		2 & 2 - 2(1-\sqrt{3}) 
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		\sqrt{3} & 3\\
+		1 & \sqrt{3}
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		1 & \sqrt{3}\\
+		0 & 0
+	\end{pmatrix}
+\end{utregning}
+Dette gir oss egenvektoren $\vec{v}_1 = (-\sqrt{3}, 1)$. 
+
+For $\lambda_2 = 2(1 + \sqrt{3})$ kan vi følge de samme stegene:
+\begin{utregning}
+	\begin{pmatrix}
+		2 - 2(1 + \sqrt{3}) & 6\\
+		2 & 2 - 2(1 +\sqrt{3}) 
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		-\sqrt{3} & 3\\
+		1 & -\sqrt{3}
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		1 & -\sqrt{3}\\
+		0 & 0
+	\end{pmatrix}
+\end{utregning}
+Som gir oss $\vec{v}_2 = (\sqrt{3}, 1)$. 
+
+\deloppgave
+La $\vec{x}' = (x', y')$. Da kan vi uttrykke systemet som $\vec{x}' = A\vec{x}$ hvor $A$ er matrisen oppgitt over. Den generelle løsningen for et slikt system av differensiallikninger er $\vec{x} = c_1\vec{x}_1 + c_2\vec{x}_2$ der $c_1$ og $c_2$ er skalarer og
+\begin{utregning}
+	\vec{x}_1 &=& \vec{v}_1e^{\lambda_1 t}\\
+	\vec{x}_2 &=& \vec{v}_2e^{\lambda_2 t}
+\end{utregning}
+Her er $\lambda$ egenverdiene til $A$ og $\vec{v}$ er egenvektorene til $A$. Dette gir oss løsningen:
+\begin{utregning}
+	\vec{x} &=& c_1\begin{pmatrix} -\sqrt{3}\\1 \end{pmatrix}e^{2(1-\sqrt{3})t} + c_2\begin{pmatrix}
+		\sqrt{3} \\ 1
+	\end{pmatrix} e^{2(1+\sqrt{3})t}
+\end{utregning}
+Gitt initialbetingelsen $\vec{x}(0) = (1,1)$ så har vi at
+\begin{utregning}
+	\begin{pmatrix}
+		-\sqrt{3} & \sqrt{3}\\
+		1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		c_1\\c_2
+	\end{pmatrix} &=&
+	\begin{pmatrix}
+		0\\1
+	\end{pmatrix}\\
+	\begin{pmatrix}
+		c_1\\ c_2
+	\end{pmatrix}
+	&=&
+	-\frac{\sqrt{3}}{6}
+	\begin{pmatrix}
+		1 & -\sqrt{3}\\
+		-1 & -\sqrt{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		0\\1
+	\end{pmatrix}
+	=
+	\frac{1}{2}
+	\begin{pmatrix}
+		1\\
+		1
+	\end{pmatrix}
+\end{utregning}
+Som gir oss den partikulære løsningen:
+\begin{likning}
+	\vec{x}_p = \frac{1}{2}
+	\begin{pmatrix}
+		-\sqrt{3}\\1
+	\end{pmatrix} e^{2(1-\sqrt{3})t}
+	+
+	\frac{1}{2}
+	\begin{pmatrix}
+		\sqrt{3}\\1
+	\end{pmatrix} e^{2(1+\sqrt{3})t}
+\end{likning}
+
+\oppgave
+\deloppgave
+For denne rekken kan vi bare bruke en enkel divergenstest:
+\begin{likning}
+	\lim_{n \to \infty} \frac{5n}{8n + 3n^{2/3}} = \frac{5}{8}
+\end{likning}
+Dette tilsier at rekken divergerer.
+
+\deloppgave
+For denne rekken er det lett å tenke seg å bruke integral-testen. Problemet her er at det ikke er så enkel å integrere funksjonen $1/\ln x$. Vi velger derfor å bruke sammenligningstesten. Betrakt nå $a_n = \dfrac{1}{n\ln n}$. La nå $b_n = \dfrac{1}{\ln n}$. Her er det tydelig at $a_n \leq b_n$ fordi $n\ln n \geq \ln n$ for alle verdier $n \geq 1$. Ved å bruke integraltesten på $a_n$ finner vi ut at den divergerer:
+\begin{utregning}
+	\int_2^\infty \frac{1}{x\ln x} \dd x = \left. \ln x \right|_2^\infty \to \infty
+\end{utregning}
+Siden $a_n \leq b_n$ og $\sum a_n$ divergerer så må også $\sum b_n$ divergere, i.e. rekken oppgitt i oppgaven divergerer.
+
+\deloppgave
+Betrakt først den geometriske rekken:
+\begin{likning}
+	\sum_{n = 1}^\infty x^n = \frac{1}{1 - x} - 1 \qquad |x| < 1
+\end{likning}
+Deriverer vi begge sider får vi da
+\begin{utregning}
+	\sum_{n = 1}^\infty nx^{n-1} = \frac{1}{(1 - x)^2}
+\end{utregning}
+
+\oppgave
+\deloppgave
+Ett kritisk punkt $\vec{x}_0$ oppfyller $\nabla f(\vec{x}_0) = \vec{0}$. Spesifikt for den oppgitte $f(x, y)$ har vi at
+\begin{utregning}
+	\pdiff{f}{x} &=& \frac{1}{5}x-10xe^{-(x^2 + y^2)} = \frac{1}{5}x\left(1 - 50e^{-(x^2 + y^2)}\right)\\
+	\pdiff{f}{y} &=& \frac{1}{5}y - 10ye^{-(x^2 + y^2)} = \frac{1}{5}y\left(1 - 50e^{-(x^2 + y^2)}\right)
+\end{utregning}
+Vi har derfor at $\nabla f(0,0) = 0$, så $(0,0)$ er et kritisk punkt. Videre har vi også at for alle punkter som $(x, y)$ som oppfyller $x^2 + y^2 = \ln 50$ så vil $1 - 50e^{-\ln 50} = 0$. Dette betyr også at $\nabla f(x, y) = 0$ som betyr at disse også er kritiske punkter.
+
+\deloppgave
+For å unngå rot, så lar vi $\theta(0,0) = x^2 + y^2$. De kritiske punktene vi skal sjekke for nå er når $(x, y) = (0,0)$ og $\theta(x, y) = \ln 50$. Betrakt først:
+\begin{utregning}
+	\frac{\partial^2 f}{\partial x^2} &=& \frac{1}{5} - 10e^{-\theta}\left(1 + 2x^2\right)
+\end{utregning}
+For punktet $(0,0)$ har vi at $\partial^2f/\partial x^2 = -49/5$. Siden $\partial^2f/\partial x^2 < 0$ så ser vi på et potensielt maksimumspunkt. Vi finner også andre derivasjonen av de andre variablene:
+\begin{utregning}
+	\frac{\partial^2 f}{\partial x\partial y} &=& 20xye^{-\theta}\\
+	\frac{\partial^2 f}{\partial y\partial x} &=& \frac{\partial^2 f}{\partial x\partial y}\\
+	\frac{\partial^2 f}{\partial y^2} &=& \frac{1}{5} - 10e^{-\theta}(1+2y^2) 
+\end{utregning}
+Dette gir følgende Hessian matrise $\mathcal{H}$:
+\begin{likning}
+	\mathcal{H} = \hessianto{f} = \begin{pmatrix}
+		-49/5 & 0\\
+		0 & -49/5
+	\end{pmatrix}
+\end{likning}
+for punktet $(0,0)$ og dermed $\det\mathcal{H} > 0$. Vi har derfor et maksimumspunkt for punktet $(0,0)$. 
+
+For $\theta = \ln 50$. Har vi
+\begin{utregning}
+	\frac{\partial^2f}{\partial x^2} = \frac{2}{5}x^2
+\end{utregning}
+Her er det helt klart at $\partial^2f/\partial x^2 > 0$ for alle $x \neq 0$. Hessian matrisen her $\mathcal{H}$ blir dermed:
+\begin{likning}
+	\mathcal{H} = \frac{2}{5}\begin{pmatrix}
+		x^2 & xy\\
+		xy & y^2
+	\end{pmatrix}
+\end{likning}
+Herifra er det enkelt å se at diskriminanten $\det\mathcal H = 0$. Det vil si at for $\theta = \ln 50$ så har vi ingen konklusjon via denne testen.
+
+Vi får heller sammenligne verdiene. Vi har $f(0,0) = 5$ mens for $\theta = \ln 50$ har vi
+\begin{likning}
+	f(x_\theta, y_\theta) = \frac{1}{10} + \frac{1}{10}\ln 50 = \frac{1}{10}\left(1 + \ln 50\right)
+\end{likning}
+Herifra har vi at $f(0,0) > f(x_\theta, y_\theta)$. Siden punktet $(0,0)$ var funnet til å være en maksimumspunkt så må $(x_\theta, y_\theta)$ være minimumspunktene.
+
+Siden funksjonen er definert for alle punkter $x^2 + y^2 \leq 100$. Vi sjekker derfor for randpunktene som oppfyller $x^2 + y^2 = 100$. Når $x^2 + y^2 = 100$ har vi at
+\begin{likning}
+	f(x_{100}, y_{100}) = \frac{5}{e^100} + 10 \approx 10
+\end{likning}
+
+Vi har derfor at $(0,0)$ er et lokalt maksimumspunkt, $(x_\theta, y_\theta)$ er et globalt og lokalt minimumspunkt. Mens, $(x_{100}, y_{100})$ er et globalt maksimumspunkt.
+\clearpage
