@@ -83,6 +83,12 @@
 \newcommand{\cov}[2]{\,\mathrm{Cov}(#1, #2)}
 \newcommand{\sd}{\,\mathrm{SD}}
 \newcommand{\prob}[1]{\,P\left(#1\right)}
+\newcommand{\var}[1]{\, \mathrm{Var}\left(#1\right)}
+\newcommand{\expected}[1]{\,E\left(#1\right)}
+\newcommand{\confidence}[3]{\,\left[#1 - #2_{\alpha/2} #3, #1 + #2_{\alpha/2} #3\right]}
+\newcommand{\mean}[4]{\,\frac{1}{#4}\sum_{#2 = #3}^{#4} #1_{#2}}
+\newcommand{\sVar}[4]{\,\frac{1}{#4 - 1}\sum_{#2 = #3}^{#4} \left(#1_{#2} - \bar{#1}\right)^2}
+\newcommand{\tTest}[4]{\,\frac{#1 - #2}{#3/\sqrt{#4}}}
 
 \newcommand{\fref}[1]{\hyperref[#1]{Figur \eqref{#1}}}
 \newcommand{\tref}[1]{\hyperref[#1]{Tabell \eqref{#1}}}
@@ -217,5 +223,6 @@
 \tableofcontents
 \newpage
 \input{./set/E2019K}
+\input{./set/E2019}
 \input{./set/E2018}
 \end{document}

@@ -1,0 +1,117 @@
+\eksamen{2019}
+\statistikk
+\oppgave
+Legg merke til at
+\begin{utregning}
+	\prob{X = 0} + \prob{X = 1} + \prob{X = 2} = 1 \quad \implies \quad \prob{X = 2} = 0.200
+\end{utregning}
+\deloppgave
+Sannsynligheten $\prob{X < 1} = \prob{X = 0} = 0.250$.
+
+\deloppgave
+Her har vi fra betinget sannynlighet:
+\begin{likning}
+	\prob{X > 0 | X > 1} = \frac{\prob{X > 0 \cap X \geq 1}}{\prob{X \geq 1}}
+\end{likning}
+Siden $\{1, 2\} \cap \{1, 2\} = \{1, 2\}$ så har vi
+\begin{likning}
+	\prob{X > 0 | X > 1} = \frac{\prob{X \geq 1}}{\prob{X \geq 1}} = 1
+\end{likning}
+
+\deloppgave
+Per definisjon av forventningsverdi:
+\begin{likning}
+	\mu_X = 1\cdot \prob{X = 1} + 2\prob{X = 2} = 0.950
+\end{likning}
+
+\deloppgave
+Per definisjon av variasjon $\var{X}$:
+\begin{utregning}
+	\var{X} &=& E\left(X^2\right) - \left[E\left(X\right)\right]^2\\
+	&=& 1\cdot P(X = 1) + 4\cdot P(X = 2) - 0.950^2 = 0.4475
+\end{utregning}
+Dette gir $\sigma_X = \sqrt{\var{X}} = 0.6690$
+
+\deloppgave
+Vi skal nå finne forventningsverdien $E\left((Y-X)^2\right)$:
+\begin{utregning}
+	E\left((Y-X)^2\right) &=& E\left(X^2 + Y^2 - 2XY\right)\\
+	&=& E\left(X^2\right) + E\left(Y^2\right) - 2E\left(XY\right)
+\end{utregning}
+Vi har også fått oppgitt at $\mu_Y = 1.80$ og $\sigma_Y = 1.20$. Siden
+\begin{utregning}
+	\because \var{Y} &=& E(Y^2) - \mu_Y^2\\
+	\therefore \expected{Y^2} &=& \sigma_Y^2 + \mu_Y^2
+\end{utregning}
+Dette gir
+\begin{likning}
+	\expected{\left(Y - X)^2\right)} = \sigma_X^2 + \mu_X^2 + \sigma_Y^2 + \mu_Y^2 - 2\expected{XY}
+\end{likning}
+Videre har vi
+\begin{utregning}
+	\because \corr{X}{Y} &=& \frac{\cov{X}{Y}}{\sigma_X\sigma_Y}\\
+	\therefore \cov{X}{Y} &=& \sigma_X\sigma_Y\corr{X}{Y}
+\end{utregning}
+Siden
+\begin{utregning}
+	\because \cov{X}{Y} &=& \expected{XY} - \mu_X\mu_Y\\
+	\therefore \expected{XY} &=& \sigma_X\sigma_Y\corr{X}{Y} + \mu_X\mu_Y 
+\end{utregning}
+Dette gir oss:
+\begin{utregning}
+	\expected{\left(Y - X\right)^2} &=& \sigma_X^2 + \mu_X^2 + \sigma_Y^2 + \mu_Y^2 - 2\sigma_X\sigma_Y\corr{X}{Y} - 2\mu_X\mu_Y\\
+	&=& \left(\mu_Y - \mu_X\right)^2 + \left(\sigma_Y - \sigma_X\right)^2 + 2\sigma_X\sigma_Y\left(1 - \corr{X}{Y}\right) \approx 1.722
+\end{utregning}
+
+\oppgave
+\deloppgave
+Siden $X \sim \mathrm{bin}(n, p)$ så er $\expected{X} = np$. Dette gir at
+\begin{likning}
+	\expected{\hat{p}} = \expected{\frac{X}{n}} = \frac{1}{n}\expected{X} = p
+\end{likning}
+
+\deloppgave
+For en binomisk distribusjon så har vi at $\var{X} = np(1-p)$. Dette gir at
+\begin{likning}
+	\var{\hat{p}} = \frac{1}{n^2}\var{X} = \frac{p}{n}(1-p)
+\end{likning}
+
+\deloppgave
+For at en estimator skal kunne bli klassifisert som en god estimator så krever vi at estimatoren er forventningsrett. Siden $\expected{\hat{p}} = p$ så er dette kravet oppfylt. Videre ønsker vi at variansen skal være så lite som mulig. Dette kravet handler mer om sammenligningen mellom to foreslåtte estimatorer og er ikke noe vi kan undersøke her. Tilslutt ønsker vi at variansen til estimatoren skal gå mot null når $n\to\infty$. Per utregning vist i forrige oppgave så ser vi at dette er tilfellet. Den oppgitte $\hat{p}$ er derfor en god estimator for $p$.
+
+\deloppgave
+Gitt $X = 354$ så har vi at $\hat{p} = 354/500$. En $95\%$ ($\alpha = 0.05$) konfidensinterval for $p$ er derfor:
+\begin{utregning}
+	\confidence{\hat{p}}{z}{\sqrt{\frac{\hat{p}}{n}(1-\hat{p})}} = \left[0.6681, 0.7479\right]
+\end{utregning}
+
+\deloppgave
+Grunnen til at konfidensintervallet oppgitt ovenfor er gyldig er på grunn av sentral grenseteoremet. I henhold til sentral grenseteoremet er forutsetningene at $n\hat{p}(1-\hat{p}) > 5$. I vårt tilfellet så er $n\hat{p}(1-\hat{p}) = 103.368$ som er mer enn tilstrekkelig for å oppfylle det kravet.
+
+\oppgave
+For denne spesifikke problemstillingen velger vi å utføre en $T$-test fordi $\sigma$ er ukjent. La
+\begin{utregning}
+	H_0 \colon&& \mu \leq 15\\
+	H_1 \colon&& \mu > 15
+\end{utregning}
+\begin{utregning}
+	\bar{x} &=& \mean{x}{i}{1}{5} = 18.52
+\end{utregning}
+og
+\begin{utregning}
+	s^2 &=& \sVar{x}{i}{1}{5} = 18.177
+\end{utregning}
+Dette gir oss en
+\begin{utregning}
+	t &=& \tTest{\bar{x}}{15}{s}{5} = 1.846
+\end{utregning}
+Med en signifikansnivå $\alpha = 0.10$ så har vi
+\begin{utregning}
+	t_{\alpha}^{4} = 1.533
+\end{utregning}
+Siden $t > t_\alpha^4$ så forkaster vi $H_0$.
+
+\oppgave
+
+
+\clearpage
