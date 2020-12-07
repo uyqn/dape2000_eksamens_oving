@@ -1,0 +1,23 @@
+\eksamen{2016}
+\statistikk
+\setcounter{subsection}{2}
+\oppgave
+\deloppgave
+Det man må merke seg her er at det har ikke blitt oppgitt at målingene er normalfordelt eller ikke. Vanligvis må dette være et krav for at vi kan gjennomføre en $T$-test eller at antall målinger er tilstrekkelig for å benytte seg av sentralgrenseteoremet. Men, ihenhold til den informasjonen så gjennomfører vi avlikevel testen. La hypotese-testen vår være formulert ved:
+\begin{utregning}
+	H_0\colon && \mu \leq 15\\
+	H_1\colon && \mu > 15
+\end{utregning}
+Her har vi at
+\begin{utregning}
+	\bar{x} &=& \mean{x}{i}{1}{5} = 18.04\\
+	s^2 &=& \sVar{x}{i}{1}{5} = 23.133
+\end{utregning}
+Dette gir oss
+\begin{utregning}
+	t = \tTest{\bar{x}}{15}{s}{5} = 1.4133
+\end{utregning}
+Ved et signifikants-nivå $\alpha = 0.1$ har vi at $t_{0.1}^{4} = 1.533$. Siden $t < t_{\alpha}^{n-1}$ så må vi konkludere med å behold null-hypotesen $H_0$.
+
+\deloppgave
+Som nevnt tidligere; ingen steder i oppgaveteksten ble det avklart at målingene var normalfordelte. Dersom målingene ikke er normalfordelte krever vi at $n \geq 30$ for at hypotese-testen skal være gyldig. Uten noen antagelser så er ikke hypotesetesten utført i denne oppgaven gyldig.
