@@ -1,6 +1,55 @@
 \eksamen{2016}
-\statistikk
-\setcounter{subsection}{2}
+\oppgave
+\deloppgave
+Siden
+\begin{utregning}
+	\prob{X = 0} + \prob{X = 1} + \prob{X = 2} = 1
+\end{utregning}
+Så må $\prob{X = 2} = 0.23$.
+
+\deloppgave
+\begin{utregning}
+	\prob{X < 2} = \prob{X = 0} + \prob{X = 1} = 0.77
+\end{utregning}
+
+\deloppgave
+\begin{utregning}
+	\prob{X < 2 | X \geq 1} = \frac{\prob{X < 2 \cap X \geq 1}}{\prob{X \geq 1}} = \frac{\prob{X = 1}}{\prob{X=1} + \prob{X = 2}} = 0.66
+\end{utregning}
+
+\deloppgave
+Per definisjon på variansen av $Y$:
+\begin{utregning}
+	\var{Y} = \var{2X + 5} = 4\var{X}
+\end{utregning}
+Siden
+\begin{utregning}
+	\var{X} = \expected{X^2} - \left[\expected{X}\right]^2
+\end{utregning}
+Hvor
+\begin{likning}
+	\expected{X} = \sum_{x = 0}^2 x\prob{X = x} = 0.9
+\end{likning}
+og
+\begin{likning}
+	\expected{X^2} = \sum_{x = 0}^2 x^2\prob{X = x} = 1.36
+\end{likning}
+Dette gir $\var{X} = 0.55$. Dette gir $\sigma = 2\sqrt{\var{X}} = 1.483$.
+
+\oppgave
+\deloppgave
+Gitt at $T \sim \mathrm{exp}{\mu}$ så har vi at sannsynlighetstettheten $f(t) = e^{-x/\mu}/\mu$. Slikt at
+\begin{utregning}
+	P(T > 13) = \frac{1}{\mu}\int_{13}^\infty e^{-x/\mu} \dd x = \left. -e^{-x/\mu}\right|_{13}^\infty = e^{-13/\mu} \approx 0.2167
+\end{utregning}
+
+\deloppgave
+Ved å bruke den samme utregningen fra oppgaven ovenfor så har vi
+\begin{utregning}
+	P(T > a) = e^{-a/\mu} = 0.7
+\end{utregning}
+løser vi for $a$ får vi $a = -\mu \ln 0.7 \approx 3.032$.
+
 \oppgave
 \deloppgave
 Det man må merke seg her er at det har ikke blitt oppgitt at målingene er normalfordelt eller ikke. Vanligvis må dette være et krav for at vi kan gjennomføre en $T$-test eller at antall målinger er tilstrekkelig for å benytte seg av sentralgrenseteoremet. Men, ihenhold til den informasjonen så gjennomfører vi avlikevel testen. La hypotese-testen vår være formulert ved:
@@ -21,3 +70,134 @@ Ved et signifikants-nivå $\alpha = 0.1$ har vi at $t_{0.1}^{4} = 1.533$. Siden 
 
 \deloppgave
 Som nevnt tidligere; ingen steder i oppgaveteksten ble det avklart at målingene var normalfordelte. Dersom målingene ikke er normalfordelte krever vi at $n \geq 30$ for at hypotese-testen skal være gyldig. Uten noen antagelser så er ikke hypotesetesten utført i denne oppgaven gyldig.
+
+\oppgave
+\deloppgave
+Vi finner først egenverdiene til $A$. Vi har at den karakteristiske likningen
+\begin{likning}
+	\det(A - \lambda I) = \lambda^2 - 2\lambda - 3 = (\lambda + 1)(\lambda - 3) = 0
+\end{likning}
+har løsningene $\lambda_1 = -1$ og $\lambda_2 = 3$. Med følgende egenverdier har vi henholdsvis egenvektorene $\vec{v}_1$ og $\vec{v}_2$ gitt ved
+\begin{likning}
+	\begin{pmatrix}
+		2 & 1\\
+		4 & 2
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		1 & 1/2\\
+		0 & 0
+	\end{pmatrix}
+\end{likning}
+gir egenvektoren $\vec{v}_1 = (-1, 2)$ og tilsvarende $\vec{v}_2 = (1, 2)$ ved samme resonnement. Vi har derfor at $A = PDP\inverse$ der
+\begin{likning}
+	P = \begin{pmatrix}
+		-1 & 1\\
+		2 & 2
+	\end{pmatrix}
+\end{likning}
+og
+\begin{likning}
+	D = \begin{pmatrix}
+		-1 & 0\\
+		0 & 3
+	\end{pmatrix}
+\end{likning}
+
+\deloppgave
+Følgende system av differensiallikninger kan uttrykkes som $\vec{x}' = A\vec{x} + \vec{b}$ der $A$ er matrisen oppgitt i oppgaven og $\vec{b} = (1, 2)$. Generelle løsningen av følgende system er gitt ved
+\begin{likning}
+	\vec{x} = c_1\vec{v}_1e^{\lambda_1 t} + c_2\vec{v}_2e^{\lambda_2 t} - A\inverse\vec{b}
+\end{likning}
+eller i verdi
+\begin{likning}
+	\vec{x} = c_1\begin{pmatrix}
+		-1\\2
+	\end{pmatrix}e^{-t} + c_2\begin{pmatrix}
+	1\\2
+\end{pmatrix}e^{3t} + \frac{1}{3}\begin{pmatrix}1\\2\end{pmatrix}
+\end{likning}
+Med initialbetingelsen $\vec{x}(0) = \vec{0}$ så har vi at
+\begin{utregning}
+	P\begin{pmatrix}
+		c_1\\c_2
+	\end{pmatrix}
+	&=& A\inverse\vec{b}\\
+\end{utregning}
+Legg merke til at $\vec{b} = \vec{v}_2$. Dette betyr at $A\inverse \vec{b} = \vec{b}/\det(A)$. Så
+\begin{likning}
+	\begin{pmatrix}
+		c_1\\c_2
+	\end{pmatrix} =
+	-\frac{1}{3}P\inverse\vec{b} = \frac{1}{12}\begin{pmatrix}
+		2 & -1\\
+		-2 & -1
+	\end{pmatrix}
+	\begin{pmatrix}
+		1\\2
+	\end{pmatrix} = 
+	-\frac{1}{3}\begin{pmatrix} 0\\1 \end{pmatrix}
+\end{likning}
+Den partikulære løsningen blir derfor
+\begin{likning}
+	\vec{x}_p =- \frac{1}{3}\begin{pmatrix}1\\2\end{pmatrix}e^{3t} + \frac{1}{3}\begin{pmatrix}1\\2\end{pmatrix}
+\end{likning}
+
+\oppgave
+\deloppgave
+\begin{enumerate}
+	\item Her er det enkelt å se at rekken ikke konvergerer: Siden $n!$ vokser fortere enn $e^n$ så vil følgen $n!e^{-n} \to \infty$ når $n\to\infty$. Men om man skal bruke en test her ville forholdstesten gjøre jobben. La $a_n = n!e^{-n}$. Da har vi at
+	\begin{likning}
+		\frac{a_{n+1}}{a_n} = \frac{n!(n+1)e^{-n-1}}{n!e^{-n}} = \frac{n+1}{e}
+	\end{likning}
+	Dette gir $|a_{n+1}/a_n|\to\infty$ når $n \to \infty$. Altså rekken konvergerer ikke.
+	
+	\item Bruker vi forholdstesten her også med $a_n = n^2e^{-n}$ ser vi at
+	\begin{likning}
+		\frac{a_{n+1}}{a_n} = \frac{(n+1)^2e^{-n-1}}{n^2e^{-n}} = \frac{n^2 + 2n + 1}{n^2e}
+	\end{likning}
+	Dette gir at $\lim_{n\to\infty}\left|a_{n+1}/a_{n}\right| = e^{-1} < 1$. Per forholdstesten så konvergerer rekken.
+	
+	\item Her bruker vi Dirichlets test for å avgjøre konvergens. La $b_n = (-1)^n$ da har vi at $\left|\sum b_n\right| \leq 1$ for alle $n$. Videre lar vi $a_n = 1/(n+1)$. Her oppfyller vi også kravet om at $a_n \geq 0$, $a_n \geq a_{n+1}$ og $\lim_{n\to\infty} a_n = 0$. Per Dirichlets test så konvergerer rekken.
+\end{enumerate}
+
+\deloppgave
+Maclaurin rekken er gitt ved
+\begin{likning}
+	f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(0)}{n!}x^n
+\end{likning}
+Vi har vet at
+\begin{likning}
+	\frac{1}{1-t} = \sum_{n = 0}^\infty t^n
+\end{likning}
+så
+\begin{likning}
+	\frac{2x}{1-x^2} = 2x\sum_{n = 0}^\infty x^{2n} = \sum_{n = 0}^\infty 2x^{2n+1}
+\end{likning}
+Her er det enkelt å se at konvergensradien er $R = 1$ siden $b_n = 2$ for alle $n$.
+
+\oppgave 
+Den retningsderiverte til $g$ i punktet $(1, 2, 1)$ i retning $\vec{u} = (1, 1, 1)$ er gitt ved
+\begin{likning}
+	D_{\vec{u}}g(1,2,1) = \indre{\nabla g(1, 2, 1)}{\frac{\vec{u}}{\norm{\vec{u}}}}
+\end{likning}
+Med
+\begin{utregning}
+	\pdiff{g}{x} &=& 2x\\
+	\pdiff{g}{y} &=& \frac{1}{2}y\\
+	\pdiff{g}{z} &=& 2z
+\end{utregning}
+Så har vi at $\nabla g(1, 2, 1) = (2, 1, 2)$. Videre har vi at
+\begin{likning}
+	\frac{\vec{u}}{\norm{+vec{u}}} = \frac{\sqrt{3}}{3} (1,1,1)
+\end{likning}
+slik at
+\begin{likning}
+	D_{\vec{u}}g(1,2,1) = \frac{5\sqrt{3}}{3} 
+\end{likning}
+
+Videre har vi tangentplanet til $g(x, y, z) = 3$ i punktet $(1, 2, 1)$ er gitt ved planet:
+\begin{likning}
+	2x + y + 2z = 6
+\end{likning}
+\clearpage

@@ -1,5 +1,4 @@
 \eksamen{2019}
-\statistikk
 \oppgave
 Legg merke til at
 \begin{utregning}
@@ -111,10 +110,184 @@ Med en signifikansnivå $\alpha = 0.10$ så har vi
 \end{utregning}
 Siden $t > t_\alpha^4$ så forkaster vi $H_0$.
 
-\matte
 \oppgave
 \deloppgave
+Siden matrisen $A$ er en $2\times 2$-matrise så gjelder det at den karakteristiske likningen er
+\begin{utregning}
+	\det(A-\lambda I) &=& \lambda^2 - \tr{A}\lambda + \det(A)\\
+	&=& \lambda^2 - 2\lambda - 2 = 0
+\end{utregning}
+Ved $abc$-formellen får vi at
+\begin{likning}
+	\lambda = \frac{2 \pm 2\sqrt{3}}{2} = 1\pm \sqrt{3}
+\end{likning}
+Egenverdiene til $A$ er derfor $\lambda_1 = 1-\sqrt{3}$ og $\lambda_2 = 1 + \sqrt{3}$.
 
+For $\lambda_1$ så kan vi dedusere egenvektoren $\vec{v}_1$ til $A$:
+\begin{utregning}
+	\begin{pmatrix}
+		\sqrt{3} & 3\\
+		1 & \sqrt{3}
+	\end{pmatrix}
+	\sim
+	\begin{pmatrix}
+		1 & \sqrt{3}\\
+		0 & 0
+	\end{pmatrix}
+\end{utregning}
+som gir egenvektoren $\vec{v}_1 = (-\sqrt{3}, 1)$. Ved samme resonnement får vi $\vec{v}_2 = (\sqrt{3}, 1)$. $A$ kan derfor diagonaliseres:
+\begin{likning}
+	A = \frac{\sqrt{3}}{6}
+	\begin{pmatrix}
+	-\sqrt{3} & \sqrt{3}\\
+	1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		1 - \sqrt{3} & 0\\
+		0 & 1 + \sqrt{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		-1 & \sqrt{3}\\
+		1 & \sqrt{3}
+	\end{pmatrix}
+\end{likning}
 
+\deloppgave
+La $D$ og $P$ være henholdsvis
+\begin{utregning}
+	D &=& \begin{pmatrix}
+	1 - \sqrt{3} & 0\\
+	0 & 1 + \sqrt{3}
+\end{pmatrix}\\
+	P &=& \begin{pmatrix}
+		-\sqrt{3} & \sqrt{3}\\
+		1 & 1
+	\end{pmatrix}
+\end{utregning}
+Da har vi at
+\begin{utregning}
+	B &=& P\left(D^2 + 3D + 2I\right)P\inverse
+\end{utregning}
+Vi ser fra uttrykket ovenfor at egenverdiene til $B$ er
+\begin{utregning}
+	\lambda_1 &=& (1-\sqrt{3})^2 + 3(1-\sqrt{3}) + 2 = 9-5\sqrt{3}\\
+	\lambda_2 &=& (1+\sqrt{3})^2 + 3(1+\sqrt{3}) + 2 = 9+5\sqrt{3}
+\end{utregning}
+Dette gir diagonalisering av $B$:
+\begin{likning}
+	B = \frac{\sqrt{3}}{6}
+	\begin{pmatrix}
+		-\sqrt{3} & \sqrt{3}\\
+		1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		9-5\sqrt{3} & 0\\
+		0 & 9+5\sqrt{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		-1 & \sqrt{3}\\
+		1 & \sqrt{3}
+	\end{pmatrix}
+\end{likning}
+
+\deloppgave
+Observer at vi kan uttrykke systemet som $\vec{x}' = A\vec{x}$. Dette gir den generelle løsningen
+\begin{likning}
+	\vec{x} = c_1\vec{v}_1e^{\lambda_1 t} + c_2\vec{v}_2e^{\lambda_2 t}
+\end{likning}
+der $\lambda$ og $\vec{v}$ er henholdsvis egenverdiene og egenvektorene til $A$. Vi har derfor
+\begin{likning}
+	\vec{x} = c_1\begin{pmatrix}-\sqrt{3}\\1\end{pmatrix} e^{(1-\sqrt{3})t} + c_2\begin{pmatrix} \sqrt{3}\\1\end{pmatrix} e^{(1+\sqrt{3})t}
+\end{likning}
+Gitt initialbetingelsen $\vec{x}(0) = (0, 1)$ så har vi at
+\begin{likning}
+	\begin{pmatrix}
+		-\sqrt{3} & \sqrt{3}\\
+		1 & 1
+	\end{pmatrix}\begin{pmatrix}
+	c_1\\c_2
+\end{pmatrix}
+= \begin{pmatrix}
+	0\\1
+\end{pmatrix}
+\end{likning}
+Løser vi systemet får vi
+\begin{likning}
+	\begin{pmatrix}
+		c_1\\c_2
+	\end{pmatrix}
+	= \frac{\sqrt{3}}{6}\begin{pmatrix}
+		-1 & \sqrt{3}\\
+		1 & \sqrt{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		0\\1
+	\end{pmatrix}
+	= \frac{\sqrt{3}}{6}
+	\begin{pmatrix}
+		\sqrt{3}\\
+		\sqrt{3}
+	\end{pmatrix}
+\end{likning}
+Dette gir oss den partikulære løsningen:
+\begin{likning}
+	\vec{x}_p = \frac{1}{2}\begin{pmatrix}-\sqrt{3}\\1\end{pmatrix} e^{(1-\sqrt{3})t} + \frac{1}{2}\begin{pmatrix} \sqrt{3}\\1\end{pmatrix} e^{(1+\sqrt{3})t}
+\end{likning}
+
+\oppgave
+\deloppgave
+Vi kan uttrykke den oppgitte rekken som:
+\begin{utregning}
+	\sum_{n = 0}^\infty \frac{4^n - 3^n}{5^n} &=& \sum_{n = 0}^\infty \left(\frac{4}{5}\right)^n - \sum_{n = 0}^\infty \left(\frac{3}{5}\right)^n
+\end{utregning}
+Fra geometriske rekker vet vi at disse rekkene konvergerer til
+\begin{utregning}
+	\sum_{n = 0}^\infty \frac{4^n - 3^n}{5^n} &=& \frac{1}{1-4/5} - \frac{1}{1-3/5} = \frac{5}{2}
+\end{utregning}
+
+\deloppgave
+\begin{enumerate}
+	\item Ved divergenstesten så har vi at
+	\begin{likning}
+		\lim_{n \to \infty} \frac{2}{2+\left(8/9\right)^n} = 1
+	\end{likning}
+	så konkluderer vi med at rekken vil divergere.
+	
+	\item Vi bruker sammenligningstesten: La $b_n = n^{3/2}$ og $a_n$ være den oppgitte følgen. Da har vi at $0 \leq a_n \leq b_n$. Dersom $\sum b_n$ konvergerer så konvergerer $\sum a_n$. Vi kjenner igjen at $b_n$ er en $p$-rekke med $p < 1$ som tilsier at $b_n$ konvergerer. Dette vil si at den oppgitte rekken vil konvergere.
+\end{enumerate}
+
+\deloppgave
+La $u = t^2$. Da har vi at
+\begin{utregning}
+	\sin u &=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{u^{2n+1}}{\left(2n+1\right)!}\\
+	\sin t^2 &=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{t^{2(2n+1)}}{\left(2n+1\right)!}\\
+	&=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{t^{4n+2}}{\left(2n+1\right)!}\\
+	&=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{t^{4n}t^2}{\left(2n+1\right)!}
+\end{utregning}
+Dette gir at
+\begin{utregning}
+	\frac{\sin t^2}{t} &=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{t^{4n}t^2}{t\left(2n+1\right)!}\\
+	&=& \sum_{n = 0}^\infty \left(-1\right)^n\frac{t^{4n+1}}{\left(2n+1\right)!}
+\end{utregning}
+Dette vil si at
+\begin{utregning}
+	\int_0^x \frac{\sin t^2}{t} \dd t &=& \sum_{n = 0}^\infty \frac{\left(-1\right)^n}{\left(2n+1\right)!}\int_0^xt^{4n+1}\dd t\\
+	&=& \sum_{n = 0}^\infty \frac{\left(-1\right)^n}{\left(2n+1\right)!}\left[\frac{t^{4n+2}}{4n+2}\right]_0^x\\
+	&=& \sum_{n = 0}^\infty \frac{\left(-1\right)^n}{\left(2n+1\right)!}\cdot\frac{x^{2(2n+1)}}{2(2n+1)}
+\end{utregning}
+
+\oppgave
+Tangentplanet til en funksjonen $g(x)$ er gitt ved $\indre{\nabla g(x, y, z)}{\vec{x} - \vec{x}_0} = 0$ der $\vec{x} = (x, y, z)$ og i dette tilfellet $\vec{x}_0 = (1, 1, 5)$.
+\begin{utregning}
+	\nabla g(x, y, z) = \begin{pmatrix}
+		4x\\4y\\2z
+	\end{pmatrix}
+\end{utregning}
+Dette gir
+\begin{utregning}
+	\indre{\nabla g(x, y, z)}{\vec{x} - \vec{x}_0} &=& \pdiff{g}{x}(x - x_0) + \pdiff{g}{y}(y-y_0) + \pdiff{g}{z}(z - z_0)\\
+	&=& 4(x - 1) + 4(y - 1) + 10(z - 5)\\
+	&=& 4x + 4y + 10z -58 \implies 2x + 2y + 5z = 29
+\end{utregning}
 
 \clearpage

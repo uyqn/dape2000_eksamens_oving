@@ -1,0 +1,88 @@
+\oppgave
+\deloppgave
+\begin{enumerate}
+	\item Følgende rekke kan uttrykkes som
+	\begin{likning}
+		\sum_{n = 1}^\infty \left(\frac{1}{n} - \frac{1}{n+1}\right) = \sum_{n=1}^\infty \frac{1}{n(n+1)}
+	\end{likning}
+	Her kan vi bruke sammenligningstesten: La $b_n = \dfrac{1}{n^2}$ og la derfor $a_n = \dfrac{1}{n(n+1)}$. Vi har nå at $b_n \geq 0$ og $a_n \geq 0$. Videre har vi også at $b_n \geq a_n$ for alle $n \geq 1$. Vi kjenner igjen at $b_n$ er en $p$-rekke og konvergerer siden $p \geq 1$. Per sammenligningstesten så konvergerer også $a_n$, altså, rekken konvergerer.
+	
+	\item Her kan vi bruke forholdstesten: Med den gitte rekken har vi følgende:
+	\begin{likning}
+		a_n = \frac{n+1}{n+2}\frac{1}{2^n} \implies a_{n+1} = \frac{n+2}{n+3}\frac{1}{2^{n+1}} 
+	\end{likning}
+	Det er enkelt å se at
+	\begin{likning}
+		\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right| = \lim_{n\to\infty}\left|\frac{(n+2)^2}{2(n+3)(n+1)}\right| = \frac{1}{2}
+	\end{likning}
+	Vi har derfor per forholdstesten at rekken konvergerer absolutt.
+	
+	\item Her har vi en altererende følge. Dette tyder fort på at det er Dirichlets test vi må bruke. La $b_n = (-1)^n$ da har vi at $\left|\sum_{n = 1}^N b_n\right| \leq 1$ for alle $N$. La $a_n = 1/n$. Da har vi at $\sum_{n = 1}^{\infty} a_n \geq 0$, $a_i \geq a_{i+1}$ for alle $i\in\mathbb{N}_{>0}$ og $\lim_{n\to\infty} a_n = 0$. Da sier Dirichlets test at rekken $\sum_{n=1}^\infty b_na_n$ konvergerer. Så, den oppgitte rekken konvergerer.
+\end{enumerate}
+
+\deloppgave
+For en rekke $\sum_{n=0}^\infty b_n(x-c)^n$ så er konvergensradien $R$ definert som
+\begin{likning}
+	R\equiv \lim_{n\to\infty}\left|\frac{b_n}{b_{n+1}}\right|
+\end{likning}
+For den oppgitte rekken i oppgaven har vi at $b_n = (n+1)^2$ og $c = 0$. Dette gir
+\begin{likning}
+	R = \lim_{n\to\infty}\left|\frac{n+1}{n+2}\right|^2 = 1
+\end{likning}
+Konvergensradien $R$ for den oppgitte rekken er derfor $R = 1$.
+
+\deloppgave
+Vi skal finne Maclaurin rekken til $f(x) = x^2e^x + x$. Vi vet tidligere at Maclaurin rekken til $e^x$ er gitt ved:
+\begin{likning}
+	e^x = \sum_{n = 0}^\infty \frac{x^n}{n!}
+\end{likning}
+Det vil si at vi kan uttrykke $f(x)$ som 
+\begin{likning}
+	f(x) = x + x^2\sum_{n = 0}^\infty \frac{x^n}{n!} = x + \sum_{n = 0}^\infty \frac{x^{n+2}}{n!}
+\end{likning}
+
+\oppgave
+\deloppgave
+La $f\colon \mathbb R^n \to \mathbb R$ og la $\vec{u}$ være en vektor. Da er den retningsderiverte $D_{\vec{u}} f(\vec{r})$ av $f$ på punktet $\vec{r}\in\mathbb R^n$ i retningen til $\vec{u}$ gitt ved
+\begin{likning}
+	D_{\vec{u}}f(\vec{r}) = \indre{\nabla f(\vec{r})}{\frac{\vec{u}}{\norm{\vec{u}}}} 
+\end{likning}
+Gitt $g(x, y, z) = x^2 + y^2 + z^2$ så har vi:
+\begin{utregning}
+	\pdiff{g}{x} &=& 2x\\
+	\pdiff{g}{y} &=& 2y\\
+	\pdiff{g}{z} &=& 2z
+\end{utregning}
+med $\vec{r} = (1, 1, 1)$ så har vi $\nabla f(\vec{r}) = (2, 2, 2)$. Videre har vi at
+\begin{likning}
+	\frac{\vec{u}}{\norm{\vec{u}}} = \begin{pmatrix}
+		0\\1/\sqrt{2}\\1/\sqrt{2}
+	\end{pmatrix}
+\end{likning}
+Dette gir oss
+\begin{likning}
+	D_{\vec{u}}g(\vec{r}) = 2\sqrt{2}
+\end{likning}
+
+\deloppgave
+La $\vec{x} = (x, y, z)$ og la $\vec{r} = (1, 1, 1)$. Vi fant tidligere at $\nabla g(\vec{r}) = (2, 2, 2)$. Dette gir oss tangentplanet for nivåkurven $g(x, y, z) = 3$ gitt ved
+\begin{utregning}
+	\indre{\nabla g(\vec{r})}{\vec{x}-\vec{r}} &=& 0\\
+	2(x - 1) + 2(y - 1) + 2(z - 1) &=& 0\\
+	x + y + z &=& 3
+\end{utregning}
+
+\deloppgave
+Dersom et vilkårlig punkt $\vec{p}$ er et kritisk punkt for en funksjon $f(x, y z)$ så må det være slikt at $\nabla f(\vec{p}) = \vec{0}$. Dette ser vi tydelig fra tidligere beregnelse av $\nabla g(x, y z) = (2x, 2y, 2x)$. Det er klart her at $(0, 0, 0)$ er et kritisk punkt fordi $\nabla g(0, 0, 0) = (0, 0, 0)$. Det er også enkelt å se at dette er den eneste kritiske punktet siden det ikke er noen andre punkter som oppfyller kriteriet.
+
+Så, den eneste kritiske punktet vi har er $(0, 0, 0)$ for å identifisere hva slags kritisk punkt dette er bruker vi den 2. partielle derivative testen: Vi finner først Hessian matrisen $\mathcal{H}$ av $g$:
+\begin{likning}
+	\mathcal{H}(x, y, z) = \hessiantre{g} = \begin{pmatrix}
+		2 & 0 & 0\\
+		0 & 2 & 0\\
+		0 & 0 & 2
+	\end{pmatrix}
+\end{likning}
+Diskriminanten er her $D\equiv \det\left(\mathcal{H}(x, y, z)\right) = 8$. Vi ser også ifra matrisen at $\partial^2 g/\partial x^2 > 0$. Dette tilsier per andre partialle derivasjons testen at dette er et lokalt minimum.
+
+\clearpage
