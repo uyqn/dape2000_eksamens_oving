@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  8 DEC 2020 18:55
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  8 DEC 2020 21:10
 entering extended mode
 **./eksamen.tex
 (eksamen.tex
@@ -1552,39 +1552,39 @@ Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
  (eksamen.aux)
 \openout1 = `eksamen.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 142.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
 
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 
 ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 142.
+ on input line 145.
 
 \c@lstlisting=\count343
 
@@ -1638,7 +1638,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 142.
+Package hyperref Info: Link coloring ON on input line 145.
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1650,19 +1650,19 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count344
 )
-LaTeX Info: Redefining \ref on input line 142.
-LaTeX Info: Redefining \pageref on input line 142.
-LaTeX Info: Redefining \nameref on input line 142.
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
  (eksamen.out) (eksamen.out)
 \@outlinefile=\write4
 \openout4 = `eksamen.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 142.
+LaTeX Font Info:    Try loading font information for U+msa on input line 145.
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 142.
+LaTeX Font Info:    Try loading font information for U+msb on input line 145.
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1677,7 +1677,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 ) [1
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 224.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 227.
 
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
@@ -1707,32 +1707,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
-[22] [23] [24] [25]) (set/E2016.tex [26
+[22] [23] [24] [25]) (set/E2017K.tex [26
 
-] [27] [28] [29] [30])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
+] [27] [28] [29] [30]) (set/E2016.tex
+[31
+
+] [32] [33] [34] [35])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
  (eksamen.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 232.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
-
-
-Package rerunfilecheck Warning: File `eksamen.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `eksamen.out':
-(rerunfilecheck)             Before: B3F6313FB9A659D7ACF465602CA1F687
-(rerunfilecheck)             After:  E19210F2377118E4CBDC912D75A44036.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
+Package rerunfilecheck Info: File `eksamen.out' has not changed.
+(rerunfilecheck)             Checksum: 2E9F21D1873935E504B327C8D303FD67.
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 46310 strings out of 427798
- 999367 string characters out of 3147828
- 1170422 words of memory out of 3000000
- 49707 multiletter control sequences out of 15000+200000
+ 46315 strings out of 427798
+ 999418 string characters out of 3147828
+ 1170540 words of memory out of 3000000
+ 49709 multiletter control sequences out of 15000+200000
  603504 words of font info for 85 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,12n,96p,841b,809s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on eksamen.pdf (31 pages).
+Output written on eksamen.pdf (36 pages).

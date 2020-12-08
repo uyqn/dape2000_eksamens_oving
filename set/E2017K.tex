@@ -1,0 +1,209 @@
+\eksamen{2017 (Kont)}
+
+\oppgave
+Siden $X\binomDist{11}{0.4}$ så er $\sigma^2 = np(1 - p) = 2.64 \implies \sigma = 1.624$
+
+\oppgave
+Gitt sannsynlighetene i oppgaven så kan man dedusere at $P(X = 2) = 0.23$. Per definisjon på forventningsverdi har vi at
+$$
+\expected{X} = 1\cdot P(X = 1) + 2\cdot P(X = 2) = 0.9
+$$
+
+\oppgave
+\deloppgave
+Vi har at $X\normalDist{\mu_A}{\sigma_A^2}$. Derfor har vi at
+$$
+\prob{X > 34} = \prob{\frac{X - \mu_A}{\sigma_A} > \frac{34 - \mu_A}{\sigma_A}} = 1 - \Phi\left(Z \leq 0.67\right)
+$$
+Per tabell får vi at $\Phi\left(Z \leq 0.67\right) = 0.7486$ som gir $\prob{X > 34} = 0.2514$.
+
+\deloppgave
+Bruker vi definisjonen på betinget sannsynlighet har vi at
+$$
+\prob{Y > 47 | Y\geq 42} = \frac{\prob{Y > 47 \cap Y \geq 42}}{\prob{Y \geq 42}}
+$$
+Her ser vi fort at $\prob{Y > 47 \cap Y \geq 42} = \prob{Y > 47}$. Bruker vi komplement regelen får vi at
+$$
+\prob{Y > 47 | Y\geq 42} = \frac{1-\prob{Y \leq 47}}{1 - \prob{Y \leq 42}}
+$$
+Videre har vi at siden $Y\normalDist{\mu_B}{\sigma_B^2}$ så lar vi
+$$
+Z = \frac{Y - \mu_B}{\sigma_B}
+$$
+Og bruker verdiene vi finner i tabellen for standardnormalfordelingene:
+\begin{align*}
+	\prob{Y \leq 47} = \Phi\left(Z \leq 0.22\right) &= 0.5871\\
+	\prob{Y \leq 42} = \Phi\left(Z \leq -0.32\right) &= 0.3745
+\end{align*}
+Dette gir oss $\prob{Y > 47 | Y\geq 42} = 0.6601$
+
+\deloppgave
+Vi skal finne $\prob{Y > X} = \prob{Y - X > 0} = 1 - \prob{Y - X \leq 0}$. La nå $W = Y - X$ da har vi at $\expected{W} = \mu_W = \mu_B - \mu_A = 15$. Itillegg til $\var{W} = \sigma_W^2 = \sigma_B^2 + \sigma_A^2 = 122.49 \implies \sigma_W = 11.07$. Vi har nå at $W\normalDist{\mu_W}{\sigma_W^2}$. La nå
+$$
+Z = \frac{W - \mu_W}{\sigma_W}
+$$
+Da har vi at 
+$$
+\prob{Y - X \leq 0} = \prob{W \leq 0} = \Phi\left(Z \leq -1.36\right) = 0.0869
+$$
+som gir $\prob{Y > X} = 0.9131$.
+
+\deloppgave
+Vi bytter om og lar $W = X + Y$ som gir $\mu_W = \mu_A + \mu_B = 75$ videre har vi siden $\corr{X}{Y} = 0.7$ så har vi at $\var{W} = \sigma_A^2 + \sigma_B^2 + 2\cov{X}{Y}$. Hvor per definisjon $\cov{X}{Y} = \sigma_A\sigma_B\corr{X}{Y}$. Dette gir $\var{W} = \sigma_W^2 = 200.61 \implies \sigma_W = 14.2$. La nå
+$$
+Z = \frac{W - \mu_W}{\sigma_W}
+$$
+Da har vi at $\prob{W > 80} = 1 - \prob{W \leq 80}$ der
+$$
+\prob{W \leq 80} = \Phi(Z \leq 0.35) = 0.6368
+$$
+Dette gir $\prob{W > 80} = 0.3632$.
+
+\deloppgave
+Her ønsker vi å finne $t$-intervallet siden det antas at $\mu_A$ og $\sigma_A$ er ukjent. Videre har vi fortsatt at $A\normalDist{\mu_A}{\sigma_A^2}$. For et $t$-intervallet med $\alpha = 0.1$ og $9$ grader av frihet gir oss:
+$$
+\confidence{\bar{x}}{t^9}{\frac{s}{\sqrt{10}}} = \left[29.27, 37.73\right]
+$$
+
+\deloppgave
+Hypotese-test oppsettet blir som følger:
+\begin{align*}
+	H_0\colon & \mu_A \leq 30\\
+	H_1\colon & \mu_A > 30
+\end{align*}
+Med en signifikans-nivå på $\alpha = 0.10$ så har vi
+$$
+t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = 1.52
+$$
+Tabellen viser at $t_{0.1}^9 = 1.383$. Siden $t > t_{\alpha}^{n-1}$ så er det tilstrekkelig med grunnlag for å påstå at $\mu_A > 30$.
+
+\oppgave
+Gitt at en $3\times 3$-matrise $A$ har $3$ distinkte egenverdier så vet vi at $A$ kan diagonaliseres og derfor uttrykkes som $A = PDP\inverse$. Dette tilsier at $A^3 -3A^2 + 2A = 0 \implies P\left(D^3 - 3D^2 + 2D\right)P\inverse = 0$. Dette betyr at løsningene til $\lambda^3 - 3\lambda^2 + 2\lambda = 0$ er egenverdiene til $A$. Vi ser at
+\begin{align*}
+	\lambda^3 - 3\lambda^2 + 2\lambda &= 0\\
+	\lambda(\lambda^2 - 3\lambda^2 + 2) &= 0\\
+	\lambda(\lambda - 1)(\lambda - 2) &= 0
+\end{align*}
+Dermed er egenverdiene til $A$ gitt ved $\lambda_1 = 0$, $\lambda_2 = 1$ og $\lambda_3 = 2$. Siden vi bare skulle finne en eller annen matrise med tre distinkte egenverdier så blir den enkleste matrisen være diagonal-matrisen
+$$
+A = D = \begin{pmatrix}
+	0 & 0 & 0\\
+	0 & 1 & 0\\
+	0 & 0 & 2
+\end{pmatrix}
+$$
+Siden $\lambda_1\lambda_2\lambda_3 = \det(A)$ så vil ingen matriser hvor en av eller flere egenverdier lik $0$ være invertibel.
+
+\deloppgave
+Vi har at systemet av differensiallikninger kan uttrykkes som
+$$
+\begin{pmatrix}
+	x'\\y'
+\end{pmatrix} =
+\begin{pmatrix}
+	0 & 4\\
+	1 & 0
+\end{pmatrix}\begin{pmatrix}
+	x\\y
+\end{pmatrix}
+$$
+La $A$ være matrisen
+$$
+A = \begin{pmatrix}
+	0 & 4\\
+	1 & 0
+\end{pmatrix}
+$$
+Da vil $A$ ha egenverdiene gitt av løsningen til $\lambda^2 - 4 = 0$. La $\lambda_1 = -2$ og $\lambda_2 = 2$. Da vil vi få følgende egenvektorer: Siden
+$$
+\begin{pmatrix}
+	2 & 4\\
+	1 & 2
+\end{pmatrix} \sim
+\begin{pmatrix}
+	1 & 2\\
+	0 & 0
+\end{pmatrix}
+$$
+Derfor har vi for $\lambda_1$ tilsvarende egenvektor $\vec{v}_1 = (-2, 1)$. Ved samme resonnement får vi at for $\lambda_2$ har vi tilsvarende egenvektor $\vec{v}_2 = (2, 1)$. Den generelle løsningen for systemet av differensiallikninger er derfor:
+$$
+\vec{x} = c_1\begin{pmatrix}
+	-2\\1
+\end{pmatrix} e^{-t2} + c_2\begin{pmatrix}
+	2\\1
+\end{pmatrix}e^{2t}
+$$
+Gitt initialbetingelsen har vi at $\vec{x}(0) = (1,1)$. Vi får her da at $c_1$ og $c_2$ er
+$$
+\begin{pmatrix}
+	c_1\\c_2
+\end{pmatrix} = \frac{1}{4}\begin{pmatrix}
+	-1 & 2\\
+	1 & 2
+\end{pmatrix}\begin{pmatrix}
+	1\\1
+\end{pmatrix} = \frac{1}{4}\begin{pmatrix}
+	3\\3
+\end{pmatrix}
+$$
+Den partikulære løsningen $\vec{x}_p$ gitt av initialbetingelsen er derfor:
+$$
+\vec{x} = \frac{3}{4}\begin{pmatrix}
+	-2\\1
+\end{pmatrix} e^{-t2} + \frac{3}{4}\begin{pmatrix}
+	2\\1
+\end{pmatrix}e^{2t}
+$$
+
+\oppgave
+\deloppgave
+Rekken $\sum n5^{-n}$ kan også uttrykkes som:
+$$
+\sum_{n = 1}^\infty n\left(\frac{1}{5}\right)^n
+$$
+La $x = 1/5$ da vet vi at den geometriske rekken $\sum x^n$ konvergerer mot
+$$
+\sum_{n = 0}^\infty x^n = \frac{1}{1-x}
+$$
+Deriverer vi på begge sider får vi
+$$
+\sum_{n = 1} nx^{n-1} = \frac{1}{(1-x)^2}
+$$
+Siden $x = 1/5$ så har vi at
+$$
+\sum_{n = 0}^\infty 5n5^{-n} = \frac{25}{16}
+$$
+Dette vil si at 
+$$
+\sum_{n = 0}^\infty n5^{-n} = \frac{5}{16}
+$$
+
+\begin{enumerate}
+	\item Denne rekken kan uttrykkes som
+	$$
+	\sum_{n = 3}^\infty \frac{1}{n^2\sqrt{n}} = \sum_{n = 3} \frac{1}{n^{5/2}}
+	$$
+	Dette er altså en $p$-rekke. Siden $p > 1$ så konvergerer rekken.
+	
+	\item Denne rekken oppfyller kravene for en Dirichlets test. La $b_n = 1/\ln(\ln n)$ da har vi at $b_n \geq 0$ for alle $n \geq 3$. Itillegg har vi $\lim_{n \to \infty} b_n = 0$ og $b_{n+1} \leq b_n$. Per Dirichlet's test så vil denne rekken konvergere.
+\end{enumerate}
+
+\deloppgave
+Vi vet at taylor rekken til $e^x$ om et punkt $x = a$ er gitt ved
+$$
+e^{x} = \sum_{n = 0}\frac{e^a}{n!}(x - a)^n
+$$
+Det betyr at Taylor rekken om $x = 3$ av $1 + e^x$ er
+$$
+1 + e^x = 1 + e^3 + \sum_{n = 1}^\infty \frac{e^3}{n!}(x - 3)^n
+$$
+Her er det enkelt å se at konvergensradien $R \to \infty$.
+
+\oppgave
+Tangentplanet til $g$ til nivåflaten $g(x, y, z) = 11$ i punktet $(2, 1, 3)$ er gitt ved
+$$
+\indre{\nabla g}{\Delta \vec{x}} = (x - 2) + 2(y - 1) + 6(z - 3) = 0
+$$
+eller etter en opprydning $x + 2y + 6z = 22$.
+
+\clearpage
