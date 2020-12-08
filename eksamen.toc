@@ -1,92 +1,103 @@
 \babel@toc {norsk}{}
-\contentsline {part}{Eksamen 2019 (Kont)}{2}{section*.1}
-\contentsline {subsection}{\numberline {Oppgave 1)}}{2}{subsection.0.1}
-\contentsline {subsubsection}{\numberline {a)}}{2}{subsubsection.0.1.1}
-\contentsline {subsubsection}{\numberline {b)}}{2}{subsubsection.0.1.2}
-\contentsline {subsubsection}{\numberline {c)}}{2}{subsubsection.0.1.3}
-\contentsline {subsubsection}{\numberline {d)}}{2}{subsubsection.0.1.4}
-\contentsline {subsection}{\numberline {Oppgave 2)}}{2}{subsection.0.2}
-\contentsline {subsubsection}{\numberline {a)}}{2}{subsubsection.0.2.1}
-\contentsline {subsubsection}{\numberline {b)}}{3}{subsubsection.0.2.2}
-\contentsline {subsubsection}{\numberline {c)}}{3}{subsubsection.0.2.3}
-\contentsline {subsubsection}{\numberline {d)}}{3}{subsubsection.0.2.4}
-\contentsline {subsection}{\numberline {Oppgave 3)}}{3}{subsection.0.3}
-\contentsline {subsubsection}{\numberline {a)}}{3}{subsubsection.0.3.1}
-\contentsline {subsubsection}{\numberline {b)}}{3}{subsubsection.0.3.2}
-\contentsline {subsection}{\numberline {Oppgave 4)}}{4}{subsection.0.4}
-\contentsline {subsection}{\numberline {Oppgave 5)}}{4}{subsection.0.5}
-\contentsline {subsection}{\numberline {Oppgave 6)}}{5}{subsection.0.6}
-\contentsline {subsubsection}{\numberline {a)}}{5}{subsubsection.0.6.1}
-\contentsline {subsubsection}{\numberline {b)}}{5}{subsubsection.0.6.2}
-\contentsline {subsubsection}{\numberline {c)}}{6}{subsubsection.0.6.3}
-\contentsline {subsubsection}{\numberline {d)}}{6}{subsubsection.0.6.4}
-\contentsline {subsection}{\numberline {Oppgave 7)}}{6}{subsection.0.7}
-\contentsline {subsubsection}{\numberline {a)}}{6}{subsubsection.0.7.1}
-\contentsline {subsubsection}{\numberline {b)}}{7}{subsubsection.0.7.2}
-\contentsline {subsubsection}{\numberline {c)}}{7}{subsubsection.0.7.3}
-\contentsline {subsection}{\numberline {Oppgave 8)}}{7}{subsection.0.8}
-\contentsline {subsubsection}{\numberline {a)}}{7}{subsubsection.0.8.1}
-\contentsline {subsubsection}{\numberline {b)}}{7}{subsubsection.0.8.2}
-\contentsline {part}{Eksamen 2019}{9}{subsubsection.0.8.2}
-\contentsline {subsection}{\numberline {Oppgave 1)}}{9}{subsection.0.1}
-\contentsline {subsubsection}{\numberline {a)}}{9}{subsubsection.0.1.1}
-\contentsline {subsubsection}{\numberline {b)}}{9}{subsubsection.0.1.2}
-\contentsline {subsubsection}{\numberline {c)}}{9}{subsubsection.0.1.3}
-\contentsline {subsubsection}{\numberline {d)}}{9}{subsubsection.0.1.4}
-\contentsline {subsubsection}{\numberline {e)}}{10}{subsubsection.0.1.5}
-\contentsline {subsection}{\numberline {Oppgave 2)}}{10}{subsection.0.2}
-\contentsline {subsubsection}{\numberline {a)}}{10}{subsubsection.0.2.1}
-\contentsline {subsubsection}{\numberline {b)}}{10}{subsubsection.0.2.2}
-\contentsline {subsubsection}{\numberline {c)}}{11}{subsubsection.0.2.3}
-\contentsline {subsubsection}{\numberline {d)}}{11}{subsubsection.0.2.4}
-\contentsline {subsubsection}{\numberline {e)}}{11}{subsubsection.0.2.5}
-\contentsline {subsection}{\numberline {Oppgave 3)}}{11}{subsection.0.3}
-\contentsline {subsection}{\numberline {Oppgave 4)}}{12}{subsection.0.4}
-\contentsline {subsubsection}{\numberline {a)}}{12}{subsubsection.0.4.1}
-\contentsline {subsubsection}{\numberline {b)}}{12}{subsubsection.0.4.2}
-\contentsline {subsubsection}{\numberline {c)}}{13}{subsubsection.0.4.3}
-\contentsline {subsection}{\numberline {Oppgave 5)}}{13}{subsection.0.5}
-\contentsline {subsubsection}{\numberline {a)}}{13}{subsubsection.0.5.1}
-\contentsline {subsubsection}{\numberline {b)}}{13}{subsubsection.0.5.2}
-\contentsline {subsubsection}{\numberline {c)}}{14}{subsubsection.0.5.3}
-\contentsline {subsection}{\numberline {Oppgave 6)}}{14}{subsection.0.6}
-\contentsline {part}{Eksamen 2018}{15}{subsection.0.6}
-\contentsline {subsection}{\numberline {Oppgave 1)}}{15}{subsection.0.1}
-\contentsline {subsubsection}{\numberline {a)}}{15}{subsubsection.0.1.1}
-\contentsline {subsubsection}{\numberline {b)}}{15}{subsubsection.0.1.2}
-\contentsline {subsubsection}{\numberline {c)}}{15}{subsubsection.0.1.3}
-\contentsline {subsubsection}{\numberline {d)}}{15}{subsubsection.0.1.4}
-\contentsline {subsubsection}{\numberline {e)}}{16}{subsubsection.0.1.5}
-\contentsline {subsubsection}{\numberline {f)}}{16}{subsubsection.0.1.6}
-\contentsline {subsubsection}{\numberline {g)}}{16}{subsubsection.0.1.7}
-\contentsline {subsubsection}{\numberline {h)}}{16}{subsubsection.0.1.8}
-\contentsline {subsubsection}{\numberline {i)}}{17}{subsubsection.0.1.9}
-\contentsline {subsubsection}{\numberline {j)}}{17}{subsubsection.0.1.10}
-\contentsline {subsection}{\numberline {Oppgave 2)}}{17}{subsection.0.2}
-\contentsline {subsubsection}{\numberline {a)}}{17}{subsubsection.0.2.1}
-\contentsline {subsubsection}{\numberline {b)}}{18}{subsubsection.0.2.2}
-\contentsline {subsection}{\numberline {Oppgave 3)}}{19}{subsection.0.3}
-\contentsline {subsubsection}{\numberline {a)}}{19}{subsubsection.0.3.1}
-\contentsline {subsubsection}{\numberline {b)}}{19}{subsubsection.0.3.2}
-\contentsline {subsection}{\numberline {Oppgave 4)}}{20}{subsection.0.4}
-\contentsline {subsubsection}{\numberline {a)}}{20}{subsubsection.0.4.1}
-\contentsline {subsubsection}{\numberline {b)}}{20}{subsubsection.0.4.2}
-\contentsline {part}{Eksamen 2016}{21}{subsubsection.0.4.2}
-\contentsline {subsection}{\numberline {Oppgave 1)}}{21}{subsection.0.1}
-\contentsline {subsubsection}{\numberline {a)}}{21}{subsubsection.0.1.1}
-\contentsline {subsubsection}{\numberline {b)}}{21}{subsubsection.0.1.2}
-\contentsline {subsubsection}{\numberline {c)}}{21}{subsubsection.0.1.3}
-\contentsline {subsubsection}{\numberline {d)}}{21}{subsubsection.0.1.4}
-\contentsline {subsection}{\numberline {Oppgave 2)}}{22}{subsection.0.2}
-\contentsline {subsubsection}{\numberline {a)}}{22}{subsubsection.0.2.1}
-\contentsline {subsubsection}{\numberline {b)}}{22}{subsubsection.0.2.2}
-\contentsline {subsection}{\numberline {Oppgave 3)}}{22}{subsection.0.3}
-\contentsline {subsubsection}{\numberline {a)}}{22}{subsubsection.0.3.1}
-\contentsline {subsubsection}{\numberline {b)}}{23}{subsubsection.0.3.2}
-\contentsline {subsection}{\numberline {Oppgave 4)}}{23}{subsection.0.4}
-\contentsline {subsubsection}{\numberline {a)}}{23}{subsubsection.0.4.1}
-\contentsline {subsubsection}{\numberline {b)}}{23}{subsubsection.0.4.2}
-\contentsline {subsection}{\numberline {Oppgave 5)}}{24}{subsection.0.5}
-\contentsline {subsubsection}{\numberline {a)}}{24}{subsubsection.0.5.1}
-\contentsline {subsubsection}{\numberline {b)}}{24}{subsubsection.0.5.2}
-\contentsline {subsection}{\numberline {Oppgave 6)}}{25}{subsection.0.6}
+\contentsline {part}{Eksamen 2019 (Kont)}{2}{section*.1}% 
+\contentsline {subsection}{\numberline {Oppgave 1)}}{2}{subsection.0.1}% 
+\contentsline {subsubsection}{\numberline {a)}}{2}{subsubsection.0.1.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{2}{subsubsection.0.1.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{2}{subsubsection.0.1.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{2}{subsubsection.0.1.4}% 
+\contentsline {subsection}{\numberline {Oppgave 2)}}{3}{subsection.0.2}% 
+\contentsline {subsubsection}{\numberline {a)}}{3}{subsubsection.0.2.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{3}{subsubsection.0.2.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{3}{subsubsection.0.2.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{3}{subsubsection.0.2.4}% 
+\contentsline {subsection}{\numberline {Oppgave 3)}}{3}{subsection.0.3}% 
+\contentsline {subsubsection}{\numberline {a)}}{4}{subsubsection.0.3.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{4}{subsubsection.0.3.2}% 
+\contentsline {subsection}{\numberline {Oppgave 4)}}{4}{subsection.0.4}% 
+\contentsline {subsection}{\numberline {Oppgave 5)}}{4}{subsection.0.5}% 
+\contentsline {subsection}{\numberline {Oppgave 6)}}{5}{subsection.0.6}% 
+\contentsline {subsubsection}{\numberline {a)}}{5}{subsubsection.0.6.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{6}{subsubsection.0.6.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{6}{subsubsection.0.6.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{6}{subsubsection.0.6.4}% 
+\contentsline {subsection}{\numberline {Oppgave 7)}}{7}{subsection.0.7}% 
+\contentsline {subsubsection}{\numberline {a)}}{7}{subsubsection.0.7.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{7}{subsubsection.0.7.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{8}{subsubsection.0.7.3}% 
+\contentsline {subsection}{\numberline {Oppgave 8)}}{8}{subsection.0.8}% 
+\contentsline {subsubsection}{\numberline {a)}}{8}{subsubsection.0.8.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{8}{subsubsection.0.8.2}% 
+\contentsline {part}{Eksamen 2019}{10}{subsubsection.0.8.2}% 
+\contentsline {subsection}{\numberline {Oppgave 1)}}{10}{subsection.0.1}% 
+\contentsline {subsubsection}{\numberline {a)}}{10}{subsubsection.0.1.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{10}{subsubsection.0.1.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{10}{subsubsection.0.1.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{10}{subsubsection.0.1.4}% 
+\contentsline {subsubsection}{\numberline {e)}}{11}{subsubsection.0.1.5}% 
+\contentsline {subsection}{\numberline {Oppgave 2)}}{11}{subsection.0.2}% 
+\contentsline {subsubsection}{\numberline {a)}}{11}{subsubsection.0.2.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{11}{subsubsection.0.2.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{12}{subsubsection.0.2.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{12}{subsubsection.0.2.4}% 
+\contentsline {subsubsection}{\numberline {e)}}{12}{subsubsection.0.2.5}% 
+\contentsline {subsection}{\numberline {Oppgave 3)}}{12}{subsection.0.3}% 
+\contentsline {subsection}{\numberline {Oppgave 4)}}{13}{subsection.0.4}% 
+\contentsline {subsubsection}{\numberline {a)}}{13}{subsubsection.0.4.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{13}{subsubsection.0.4.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{14}{subsubsection.0.4.3}% 
+\contentsline {subsection}{\numberline {Oppgave 5)}}{14}{subsection.0.5}% 
+\contentsline {subsubsection}{\numberline {a)}}{14}{subsubsection.0.5.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{14}{subsubsection.0.5.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{15}{subsubsection.0.5.3}% 
+\contentsline {subsection}{\numberline {Oppgave 6)}}{15}{subsection.0.6}% 
+\contentsline {part}{Eksamen 2018 (Kont)}{17}{subsection.0.6}% 
+\contentsline {subsection}{\numberline {Oppgave 1)}}{17}{subsection.0.1}% 
+\contentsline {subsubsection}{\numberline {a)}}{17}{subsubsection.0.1.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{17}{subsubsection.0.1.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{17}{subsubsection.0.1.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{17}{subsubsection.0.1.4}% 
+\contentsline {subsubsection}{\numberline {e)}}{18}{subsubsection.0.1.5}% 
+\contentsline {subsubsection}{\numberline {f)}}{18}{subsubsection.0.1.6}% 
+\contentsline {subsubsection}{\numberline {g)}}{18}{subsubsection.0.1.7}% 
+\contentsline {subsubsection}{\numberline {h)}}{18}{subsubsection.0.1.8}% 
+\contentsline {subsubsection}{\numberline {i)}}{18}{subsubsection.0.1.9}% 
+\contentsline {part}{Eksamen 2018}{19}{subsubsection.0.1.9}% 
+\contentsline {subsection}{\numberline {Oppgave 1)}}{19}{subsection.0.1}% 
+\contentsline {subsubsection}{\numberline {a)}}{19}{subsubsection.0.1.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{19}{subsubsection.0.1.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{19}{subsubsection.0.1.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{19}{subsubsection.0.1.4}% 
+\contentsline {subsubsection}{\numberline {e)}}{20}{subsubsection.0.1.5}% 
+\contentsline {subsubsection}{\numberline {f)}}{20}{subsubsection.0.1.6}% 
+\contentsline {subsubsection}{\numberline {g)}}{20}{subsubsection.0.1.7}% 
+\contentsline {subsubsection}{\numberline {h)}}{21}{subsubsection.0.1.8}% 
+\contentsline {subsubsection}{\numberline {i)}}{21}{subsubsection.0.1.9}% 
+\contentsline {subsubsection}{\numberline {j)}}{21}{subsubsection.0.1.10}% 
+\contentsline {subsection}{\numberline {Oppgave 2)}}{21}{subsection.0.2}% 
+\contentsline {subsubsection}{\numberline {a)}}{21}{subsubsection.0.2.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{22}{subsubsection.0.2.2}% 
+\contentsline {subsection}{\numberline {Oppgave 3)}}{23}{subsection.0.3}% 
+\contentsline {subsubsection}{\numberline {a)}}{23}{subsubsection.0.3.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{23}{subsubsection.0.3.2}% 
+\contentsline {subsection}{\numberline {Oppgave 4)}}{24}{subsection.0.4}% 
+\contentsline {subsubsection}{\numberline {a)}}{24}{subsubsection.0.4.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{24}{subsubsection.0.4.2}% 
+\contentsline {part}{Eksamen 2016}{26}{subsubsection.0.4.2}% 
+\contentsline {subsection}{\numberline {Oppgave 1)}}{26}{subsection.0.1}% 
+\contentsline {subsubsection}{\numberline {a)}}{26}{subsubsection.0.1.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{26}{subsubsection.0.1.2}% 
+\contentsline {subsubsection}{\numberline {c)}}{26}{subsubsection.0.1.3}% 
+\contentsline {subsubsection}{\numberline {d)}}{26}{subsubsection.0.1.4}% 
+\contentsline {subsection}{\numberline {Oppgave 2)}}{27}{subsection.0.2}% 
+\contentsline {subsubsection}{\numberline {a)}}{27}{subsubsection.0.2.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{27}{subsubsection.0.2.2}% 
+\contentsline {subsection}{\numberline {Oppgave 3)}}{27}{subsection.0.3}% 
+\contentsline {subsubsection}{\numberline {a)}}{27}{subsubsection.0.3.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{28}{subsubsection.0.3.2}% 
+\contentsline {subsection}{\numberline {Oppgave 4)}}{28}{subsection.0.4}% 
+\contentsline {subsubsection}{\numberline {a)}}{28}{subsubsection.0.4.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{28}{subsubsection.0.4.2}% 
+\contentsline {subsection}{\numberline {Oppgave 5)}}{29}{subsection.0.5}% 
+\contentsline {subsubsection}{\numberline {a)}}{29}{subsubsection.0.5.1}% 
+\contentsline {subsubsection}{\numberline {b)}}{29}{subsubsection.0.5.2}% 
+\contentsline {subsection}{\numberline {Oppgave 6)}}{30}{subsection.0.6}% 

@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper,norsk]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc,url}
+\usepackage{babel,textcomp}
+\usepackage{amsmath}
+\usepackage{polynom}
+\usepackage[parfill]{parskip}
+
+
+% ------------------------------------------------------------
+% Side formatering
+\usepackage{fancyhdr}
+\lhead{DAPE2000 - Eksamen 2020 Høst}
+\rhead{Kandidatnr: 574}
+\usepackage{lastpage}
+\cfoot{Side \thepage\hspace{.5pt} av \pageref{LastPage}}
+% ------------------------------------------------------------
+
+% ------------------------------------------------------------
+% Seksjons formatering
+\makeatletter
+\renewcommand\thesection{Oppgave \@arabic\c@section)}
+\renewcommand\thesubsection{\@alph\c@subsection)}
+\makeatother
+\newcommand{\oppgave}{\,\section{}}
+\newcommand{\deloppgave}{\subsection{}}
+\renewcommand{\labelenumi}{\roman{enumi})}
+% ------------------------------------------------------------
+
+% ------------------------------------------------------------
+% Egne kommandoer for matematiske uttrykk:
+\newcommand{\pdiff}[2][]{\frac{\partial#1}{\partial #2}}
+\newcommand{\integral}[4]{\int_{#1}^{#2} #3 \mathrm{d} #4}
+\newcommand{\series}[3]{\sum_{#1}^{#2} #3}
+\newcommand{\eigval}[2][]{\lambda_{#2}^{#1}}
+\newcommand{\eigvec}[3][]{\vec{#2}_{#3}^{#1}}
+
+\newcommand{\confidence}[3]{\left[#1 - #2_{\alpha/2} #3, #1 + #2_{\alpha/2} #3\right]}
+\newcommand{\mean}[4]{\frac{1}{#4}\sum_{#2 = #3}^{#4} #1_{#2}}
+\newcommand{\sVar}[4]{\frac{1}{#4 - 1}\sum_{#2 = #3}^{#4} \left(#1_{#2} - \bar{#1}\right)^2}
+\newcommand{\tTest}[4]{\frac{#1 - #2}{#3/\sqrt{#4}}}
+\newcommand{\corr}[2]{\rho\left(#1, #2\right)}
+\newcommand{\cov}[2]{\mathrm{Cov}\left(#1, #2\right)}
+\newcommand{\sd}[1]{\mathrm{SD}\left(#1\right)}
+\newcommand{\prob}[1]{P\left(#1\right)}
+\newcommand{\var}[1]{\mathrm{Var}\left(#1\right)}
+\newcommand{\expected}[1]{E\left(#1\right)}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\inner}[2]{\left\langle #1, #2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\tr}[1]{\mathrm{tr}\left(#1\right)}
+\newcommand{\inverse}{^{-1}}
+\newcommand{\hessianto}[1][f]{
+	\begin{pmatrix}
+		\frac{\partial^2 #1}{\partial x^2} & \frac{\partial^2 #1}{\partial x\partial y}\\
+		\frac{\partial^2 #1}{\partial y\partial x} & \frac{\partial^2 #1}{\partial y^2}
+	\end{pmatrix}
+}
+\newcommand{\hessiantre}[1][f]{
+	\begin{pmatrix}
+		\frac{\partial^2 #1}{\partial x^2} & \frac{\partial^2 #1}{\partial x\partial y} & \frac{\partial^2 #1}{\partial x \partial z}\\
+		\frac{\partial^2 #1}{\partial y\partial x} & \frac{\partial^2 #1}{\partial y^2} & \frac{\partial^2 #1}{\partial y \partial z}\\
+		\frac{\partial^2 #1}{\partial z\partial y} & \frac{\partial^2 #1}{\partial z\partial y} & \frac{\partial^2 #1}{\partial z^2}
+	\end{pmatrix}
+}
+
+% ------------------------------------------------------------
+
+\title
+{
+	DAPE2000: \\
+	Matematikk 2000 med statistikk\\
+	Eksamen 2020 Høst
+}
+\author{Kandidatnr: 574}
+\date{10. Desember 2020}
+
+\begin{document}
+	\maketitle
+	\pagenumbering{gobble}
+	\clearpage
+	\pagestyle{fancy}
+	\pagenumbering{arabic}
+	
+	
+\end{document}

@@ -1,0 +1,69 @@
+\eksamen{2018 (Kont)}
+\oppgave
+\deloppgave
+Gitt at $X \sim bin(n, p)$ så er $P(X = x)$ gitt ved
+\begin{likning}
+	P(X = x) = \binom{n}{x}p^x(1-p)^x
+\end{likning}
+for $p = 0.2$, $x = 5$ og $n = 10$ har vi at $P(X = 5) \approx 0.0264$.
+
+\deloppgave
+Ved komplementregelen har vi at $\prob{X > 4} = 1 - \prob{X \leq 4}$. Der $\prob{X \leq 4} = 0.967$ som gir $\prob{X > 4} = 0.033$.
+
+\deloppgave
+Ved betinget sannsynlighet har vi at
+$$
+\prob{X > 4 | X \geq 4} = \frac{\prob{X > 4 \cap X \geq 4}}{\prob{X \geq 4}} = \frac{\prob{X > 4}}{\prob{X \geq 4}} = 1
+$$
+Videre har vi at 
+$$
+\prob{X \geq 4} = \prob{X > 3} = 1 - \prob{X \leq 3} = 0.121
+$$
+Dette gir at $\prob{X > 4 | X \geq 4} = 0.273$
+
+\deloppgave
+Ved sentralgrenseteoremet har vi for store $n \geq 30$ at $X$ blir tilnærmet normalfordelt. Dette gir $\mu = np = 67.2$ og $\sigma^2 = 53.76$ eller $\sigma = 7.33$.
+
+\deloppgave
+Her har vi at
+$$
+\prob{X < 55} = \prob{\frac{x - \mu}{\sigma} < \frac{55-67.2}{7.33}} = \Phi\left(Z < -1.68\right) = 0.0465
+$$
+
+\deloppgave
+Vi finner først $\var{Z}$:
+$$
+\var{Z} = \frac{1}{\sigma^2}\var{X} = 1
+$$
+Det også si at $\sd\left(Z\right) = 1$.
+
+\deloppgave
+Vi velger estimatoren $\hat{p} = X/n = 0.134$. Videre har vi signifikansnivået $\alpha = 0.05$ slikt at $z_{\alpha/2} = 1.960$. Slikt at konfidensintervallet blir $\left[0.098, 0.170\right]$.
+
+\deloppgave
+Lengden $L$ er gitt ved
+$$
+L^2 = 4z_{\alpha/2}^2\frac{\hat{p}(1-\hat{p})}{n}
+$$
+Løser vi for $n$ når $L^2 = 0.04^2$ får vi
+$$
+n = 4z_{\alpha/2}^2\frac{\hat{p}(1-\hat{p})}{L^2}
+$$
+som gir oss $n \geq 1115$.
+
+\deloppgave
+Oppsettet av hypotesetesten vår blir følgende:
+\begin{align*}
+	H_0\colon & p \leq 0.1\\
+	H_1\colon & p > 0.1
+\end{align*}
+For en $P$-test har vi at
+$$
+z = \frac{0.134 - 0.1}{\sqrt{\frac{0.1\cdot0.9}{336}}} = 2.077
+$$
+For en signifikansnivå $\alpha = 0.1$ har vi $z_\alpha = 1.282$. Siden $z > z_\alpha$ så konkluderer vi med at $H_0$ skal forkastes. Altså det er grunnlag for å påstå at $p > 0.1$.
+
+\deloppgave
+
+
+\clearpage
