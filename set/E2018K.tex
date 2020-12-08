@@ -8,7 +8,7 @@ Gitt at $X \sim bin(n, p)$ så er $P(X = x)$ gitt ved
 for $p = 0.2$, $x = 5$ og $n = 10$ har vi at $P(X = 5) \approx 0.0264$.
 
 \deloppgave
-Ved komplementregelen har vi at $\prob{X > 4} = 1 - \prob{X \leq 4}$. Der $\prob{X \leq 4} = 0.967$ som gir $\prob{X > 4} = 0.033$.
+Ved komplementregelen har vi at $\prob{X > 4} = 1 - \prob{X \leq 4}$. Der $\prob{X \leq 4} = 0.9672$ som gir $\prob{X > 4} = 0.0328$.
 
 \deloppgave
 Ved betinget sannsynlighet har vi at
@@ -17,9 +17,9 @@ $$
 $$
 Videre har vi at 
 $$
-\prob{X \geq 4} = \prob{X > 3} = 1 - \prob{X \leq 3} = 0.121
+\prob{X \geq 4} = \prob{X > 3} = 1 - \prob{X \leq 3} = 0.1209
 $$
-Dette gir at $\prob{X > 4 | X \geq 4} = 0.273$
+Dette gir at $\prob{X > 4 | X \geq 4} = 0.2713$
 
 \deloppgave
 Ved sentralgrenseteoremet har vi for store $n \geq 30$ at $X$ blir tilnærmet normalfordelt. Dette gir $\mu = np = 67.2$ og $\sigma^2 = 53.76$ eller $\sigma = 7.33$.
@@ -59,11 +59,165 @@ Oppsettet av hypotesetesten vår blir følgende:
 \end{align*}
 For en $P$-test har vi at
 $$
-z = \frac{0.134 - 0.1}{\sqrt{\frac{0.1\cdot0.9}{336}}} = 2.077
+z = \frac{0.134 - 0.1}{\sqrt{\frac{0.1\cdot0.9}{336}}} = 2.0774
 $$
 For en signifikansnivå $\alpha = 0.1$ har vi $z_\alpha = 1.282$. Siden $z > z_\alpha$ så konkluderer vi med at $H_0$ skal forkastes. Altså det er grunnlag for å påstå at $p > 0.1$.
 
-\deloppgave
+\oppgave
+Siden det ble oppgitt at $X$ og $Y$ er uavhengige så har vi at $\corr{X}{Y} = 0$. Per definisjon av korrelasjon har vi
+$$
+\corr{X}{Y} = \frac{\cov{X}{Y}}{\sigma_X\sigma_Y}
+$$
+hvor
+$$
+\cov{X}{Y} = \expected{XY} - \expected{X}\expected{Y}
+$$
+og $\corr{X}{Y} = 0 \implies \cov{X}{Y} = 0$. Løser vi likningen over for $\expected{XY}$ får vi derfor at $\expected{XY} = \expected{X}\expected{Y}$.
 
+\oppgave
+\deloppgave
+Vi finner først egenverdiene $\lambda$ til $A$. Dette gjør vi ved å løse følgende karakteristiske likning:
+$$
+\det\left(A - \lambda\right) = \lambda^2 - 4 = 0
+$$
+Dette gir $\lambda_1 = -2$ og $\lambda_2 = 2$. Egenvektorene $\vec{v}$ er derfor henholdsvis for $\lambda_1 = 2$:
+$$
+\begin{pmatrix}
+	2 & 1\\
+	4 & 2
+\end{pmatrix}
+\sim
+\begin{pmatrix}
+	2 & 1\\
+	0 & 0
+\end{pmatrix}
+$$
+Som gir egenvektoren $\vec{v}_1 = (-1, 2)$. Ved samme argument får vi derfor også $\vec{v}_1 = (1, 2)$ for egenverdien $\lambda_2 = 2$. Vi kan derfor diagonalisere matrisen $A$ som $A = PDP\inverse$ der
+$$
+P = \begin{pmatrix}
+	-1 & 1\\
+	2 & 2
+\end{pmatrix}
+$$
+og 
+$$
+D = \begin{pmatrix}
+	-2 & 0\\
+	0 & 2
+\end{pmatrix}
+$$
+Gitt $B = A^3 + 2A + I$ så kan vi diagonalisere $B$ som $B = P\left(D^3 + 2D + I\right)P\inverse$ der
+$$
+\left(D^3 + 2D + I\right) = \begin{pmatrix}
+	-9 & 0\\
+	0 & 13
+\end{pmatrix}
+$$
+
+\deloppgave
+Systemet av differensiallikninger kan vi uttrykke som $\vec{x}' = A\vec{x}$ der $\vec{x} = (x, y)$ og $A$ er matrisen gitt i forrige oppgave. Den generelle løsningen er for slike homogene systemer gitt ved
+$$
+\vec{x} = c_1\vec{v}_1e^{\lambda_1 t} + c_2\vec{v}_2e^{\lambda_2 t}
+$$
+For vårt tilfelle har vi derfor den generelle løsningen
+$$
+\vec{x} = c_1\begin{pmatrix}
+	-1\\2
+\end{pmatrix}e^{-2t} + c_2\begin{pmatrix}
+1\\2
+\end{pmatrix}e^{2t}
+$$
+Den partikulære løsningen $\vec{x}_p$ finner vi ved å løse for $c_1$ og $c_2$ av den homogene løsningen over når vi oppfyller initialbetingelsen $\vec{x}(0) = (1, 1)$. Løsningene $c_1$ og $c_2$ er her
+$$
+\begin{pmatrix}
+	c_1\\c_2
+\end{pmatrix} = P\inverse\begin{pmatrix}
+1\\1
+\end{pmatrix} = \frac{1}{4}\begin{pmatrix}
+-2 & 1\\
+2 & 1
+\end{pmatrix}\begin{pmatrix}
+1\\1
+\end{pmatrix} = \frac{1}{4}\begin{pmatrix}
+-1\\3
+\end{pmatrix}
+$$
+Den partikulære løsningen vår er derfor:
+$$
+\vec{x}_p = \frac{1}{4}\begin{pmatrix}
+	1\\-2
+\end{pmatrix}e^{-2t} + \frac{3}{4}\begin{pmatrix}
+	1\\2
+\end{pmatrix}e^{2t}
+$$
+
+\oppgave
+\deloppgave
+\begin{enumerate}
+	\item Vi kjenner igjen her at vi har en geometrisk rekke som konvergerer mot
+	$$
+	\sum_{n = 0}^\infty \left(\frac{1}{e^2}\right)^n = \frac{1}{1 - e^{-2}} = \frac{e^2}{e^2 - 1}
+	$$
+	
+	\item Vi bruker Dirichlets test her for å avgjøre konvergens fordi den oppfyller for $b_n = 1/3n$ at $b_n \geq 0$, $\lim_{n\to\infty} b_n = 0$ og $b_{n+1} \leq b_n$. Vi har derfor at den oppgitte rekken konvergerer.
+\end{enumerate}
+
+\deloppgave
+Vi vet allerede at Maclaurin rekken til $e^t$ er gitt ved
+$$
+e^t = \sum_{n = 0}^\infty \frac{1}{n!}t^n
+$$
+For $t = x^2 - 1$ har vi at
+$$
+2x^2e^{x^2 -1} = 2x^2\sum_{n = 0}^\infty \frac{1}{n!}\left(x^2-1\right)^n = \sum_{n = 0}^\infty\frac{2}{n!} x^2(x^2 - 1)^n
+$$
+Her er det enkelt å se at konvergensradien $R \to \infty$. 
+
+\oppgave
+\deloppgave
+Tangentplanet til flaten $f(x, y, z) = x^2 + y^4 - z^2 = 0$ i punktet $(1, 1, 2)$. Er gitt ved
+$$
+\indre{\nabla f}{\Delta \vec{x}} = 2(x - 1) + 4(y - 1) - 4(z - 2) = 0
+$$
+eller
+$$
+x + 2y - 2z = -1
+$$
+
+\deloppgave
+Retningsvektoren måler hvor mye $g$ øker når vi beveger oss i retningen $\vec{u}$. Retningsvektoren er gitt ved:
+\begin{likning}
+	D_{\vec{u}} = \indre{\nabla g}{\frac{\vec{u}}{\norm{\vec{u}}}}
+\end{likning}
+Spesifikt for indreproduktet av et vektorrom så har du også at
+\begin{likning}
+	D_{\vec{u}} = \norm{\nabla g}\norm{\frac{\vec{u}}{\norm{\vec{u}}}}\cos\theta = \norm{\nabla g}\cos\theta
+\end{likning}
+Siden $\nabla g$ alltid peker mot der $g$ vokser fortest, la $\nabla g\parallel\vec{u}$. Da vil $\norm{\nabla g}$ være den største verdien av den retningsderiverte. Videre har vi også at
+\begin{utregning}
+	\norm{\nabla g}^2 = \indre{\nabla g}{\nabla g}
+\end{utregning}
+Med
+\begin{utregning}
+	\pdiff{g}{x} &=& -2xe^{-(x^2 + y^2)}\\
+	\pdiff{g}{y} &=& -2ye^{-(x^2 + y^2)}
+\end{utregning}
+så har vi
+\begin{likning}
+	\norm{\nabla g}^2 = 4x^2e^{-2(x^2+y^2)} + 4y^2e^{-2(x^2 + y^2)} = 4(x^2 + y^2)e^{-2(x^2+y^2)}
+\end{likning}
+La $\theta = x^2 + y^2$ da har vi
+\begin{likning}
+	\norm{\nabla g}^2 = 4\theta e^{-2\theta}
+\end{likning}
+som gir
+\begin{likning}
+	\frac{\dd }{\dd \theta} 4\theta e^{-2\theta} = 4\left(1 - 2\theta^2\right)e^{-2\theta}
+\end{likning}
+Vi har at $\theta^2 = 1/2$ er et kritisk punkt for funksjonen over. Andre derivasjonstesten
+\begin{likning}
+	\frac{\dd^2}{\dd\theta^2} 4\theta e^{-2\theta} = 16(\theta - 1)e^{-2\theta}
+\end{likning}
+er negativ for $\theta = 1/\sqrt{2}$ som tyder på at $\theta^2 = 1/2$ er et topp punkt for $4\theta e^{-2\theta}$. Det vil si at alle punktene $(x, y)$ som $x^2 + y^2 = 1/2$ danner en sirkel om origo med radius $\sqrt{2}/2$ gir størst mulig verdi for den retningsderiverte av $g(x, y)$.
 
 \clearpage
