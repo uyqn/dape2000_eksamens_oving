@@ -12,12 +12,12 @@ function tTest(sample, mu, alpha)
     std = sqrt(s);
     
     t = (m - mu)/(sqrt(s/n));
-    tCrit = tinv(1 - alpha, n-1);
     
-    disp("sample mean = " + m)
-    disp("sample variance = " + s)
-    disp("sample std = " + std)
-    disp("observed t value = " + t)
-    disp("critical t value = " + tCrit)
+    disp("\bar{x} = " + m)
+    disp("s^2 = " + s)
+    disp("s = " + std)
+    disp("t_{obs} = " + t)
+    disp("t_{\alpha} = " + tinv(1 - alpha, n-1))
+    disp("t_{\alpha/2} = " + tinv(1 - alpha/2, n-1))
 end
 
