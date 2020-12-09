@@ -1,6 +1,7 @@
-function zInterval(mean, variance, n, alpha)
-    x = mean;
+function zInterval(x, variance, n, alpha)
+    x = mean(x);    
     z = norminv(1 - alpha/2);
+    z = round(1000*z)/1000;
     
     low = x - z*sqrt(variance/n);
     high = x + z*sqrt(variance/n);

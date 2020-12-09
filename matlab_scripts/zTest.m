@@ -1,11 +1,12 @@
-function zTest(sample, mu, variance, alpha)
-    m = mean(sample);
+function zTest(x, mu, variance, alpha)
+    x = mean(x);
     n = size(sample, 2);
-    z = (m - mu)/sqrt(variance/n);
+    z = (x - mu)/sqrt(variance/n);
+    z = round(1000*z)/1000;
     
-    disp("\bar{x} = " + m);
+    disp("\bar{x} = " + x);
     disp("z_{obs} = " + z);
-    disp("z_{\alpha} = " + norminv(1-alpha));
-    disp("z_{\alpha/2} = " + norminv(1-alpha/2));
+    disp("z_{\alpha} = " + round(1000*norminv(1-alpha))/1000);
+    disp("z_{\alpha/2} = " + round(1000*norminv(1-alpha/2))/1000);
 end
 
