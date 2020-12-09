@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  9 DEC 2020 17:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  9 DEC 2020 18:18
 entering extended mode
 **./eksamen2020.tex
 (eksamen2020.tex
@@ -218,6 +218,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.s
+ty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\polynom\polynom.st
 y"
 Package: polynom 2017/07/17 0.19 (CH,HA)
@@ -277,19 +289,26 @@ LaTeX Font Info:    ... okay on input line 89.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 89.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
-[1
+("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
 
 ] 
 AED: lastpage setting LastPage
 (eksamen2020.aux) ) 
 Here is how much of TeX's memory you used:
- 2750 strings out of 427798
- 34666 string characters out of 3147828
- 109439 words of memory out of 3000000
- 6751 multiletter control sequences out of 15000+200000
- 14025 words of font info for 23 fonts, out of 3000000 for 9000
+ 3032 strings out of 427798
+ 37639 string characters out of 3147828
+ 109938 words of memory out of 3000000
+ 7017 multiletter control sequences out of 15000+200000
+ 15260 words of font info for 29 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 27i,6n,43p,229b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,43p,229b,188s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on eksamen2020.pdf (1 page).
