@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  9 DEC 2020 17:12
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  9 DEC 2020 18:05
 entering extended mode
 **./eksamen.tex
 (eksamen.tex
@@ -1712,23 +1712,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--85
 ] [27] [28] [29] [30]) (set/E2016.tex
 [31
 
-] [32] [33] [34] [35])
+] [32] [33] [34] [35]) (set/E20xx.tex [36
+
+] [37] [38])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
  (eksamen.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 236.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
-Package rerunfilecheck Info: File `eksamen.out' has not changed.
-(rerunfilecheck)             Checksum: 2E9F21D1873935E504B327C8D303FD67.
+
+
+Package rerunfilecheck Warning: File `eksamen.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `eksamen.out':
+(rerunfilecheck)             Before: 4B232C0CD94BF7502C74170B66F0270C
+(rerunfilecheck)             After:  2E9F21D1873935E504B327C8D303FD67.
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 46315 strings out of 427798
- 999418 string characters out of 3147828
- 1170540 words of memory out of 3000000
+ 46318 strings out of 427798
+ 999447 string characters out of 3147828
+ 1170662 words of memory out of 3000000
  49709 multiletter control sequences out of 15000+200000
  603504 words of font info for 85 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,12n,96p,841b,809s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on eksamen.pdf (36 pages).
+Output written on eksamen.pdf (39 pages).

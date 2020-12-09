@@ -127,3 +127,11 @@
 \contentsline {subsubsection}{\numberline {a)}}{34}{subsubsection.0.5.1}
 \contentsline {subsubsection}{\numberline {b)}}{34}{subsubsection.0.5.2}
 \contentsline {subsection}{\numberline {Oppgave 6)}}{35}{subsection.0.6}
+\contentsline {subsection}{\numberline {Oppgave 7)}}{36}{subsection.0.7}
+\contentsline {subsubsection}{\numberline {a)}}{36}{subsubsection.0.7.1}
+\contentsline {subsubsection}{\numberline {b)}}{36}{subsubsection.0.7.2}
+\contentsline {subsubsection}{\numberline {c)}}{36}{subsubsection.0.7.3}
+\contentsline {subsection}{\numberline {Oppgave 8)}}{37}{subsection.0.8}
+\contentsline {subsubsection}{\numberline {a)}}{37}{subsubsection.0.8.1}
+\contentsline {subsubsection}{\numberline {b)}}{37}{subsubsection.0.8.2}
+\contentsline {subsubsection}{\numberline {c)}}{38}{subsubsection.0.8.3}
