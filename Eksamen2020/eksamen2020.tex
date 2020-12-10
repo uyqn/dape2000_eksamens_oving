@@ -84,7 +84,7 @@
 	Matematikk 2000 med statistikk\\
 	Eksamen 2020 Høst
 }
-\author{Kandidatnr: 574}
+\author{Kandidatnr: 574\\Antall sider: \pageref{LastPage}}
 \date{10. Desember 2020}
 
 \begin{document}
@@ -94,4 +94,254 @@
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
 	\oppgave
+	Siden summen av alle sannsynlighetene må bli $1$ så er det enkelt å se her at $\prob{X = 2} = 0.2$.
+	
+	\deloppgave
+	$$
+	\prob{0 < X < 2} = \prob{X = 1} = 0.07
+	$$
+	
+	\deloppgave
+	Per definisjon på betinget sannsynlighet så har vi at 
+	$$
+	\prob{X \leq 2 | X > 1} = \frac{\prob{X \leq 2 \cap X > 1}}{\prob{X > 1}}
+	$$
+	Siden $\prob{X \leq 2 \cap X > 1} = \prob{X > 1} = \prob{X = 2}$. Så gir det oss at $\prob{X \leq 2 | X > 1} = 1$.
+	
+	\deloppgave
+	Per definisjon av forventningsverdi
+	$$
+	\expected{X} = \sum_{i = 0}^\infty x_i\prob{X = x_i} = 1\cdot 0.07 + 2\cdot 0.2 = 0.47
+	$$
+	
+	\deloppgave
+	Per definisjon av standardavviket har vi at
+	$$
+	\var{X} = \expected{X^2} - \mu_X^2
+	$$
+	Hvor
+	$$
+	\expected{X^2} = \sum_{i = 0}^\infty x_i^2P(X = x_i) = 1\cdot 0.07 + 4\cdot 0.2 = 0.87
+	$$
+	Dette gir at $\var{X} = \sigma^2 = 0.4$ som gir igjen at standardavviket til $X$ er $\sigma \approx 0.63$.
+	
+	\deloppgave
+	Fra definisjon av forventningsverdi så har vi at
+	$$
+	\expected{g\left(X\right)} = \sum_{x\in X} g(x)\prob{X = x}
+	$$
+	La $g\left(X\right) = a + bX + cX^2$ vi har fra lineæriteten til summen at
+	\begin{align*}
+	\sum_{x\in X} \left(a + bx + cx^2\right)\prob{X = x} &=
+	\sum_{x\in X} a\prob{X = x} + \sum_{x\in X} bx\prob{X = x} + \sum_{x\in X} cx^2\prob{X = x}\\
+	&= a\sum_{x\in X} \prob{X = x} + b\sum_{x\in X}^\infty x\prob{X = x} + c\sum_{x\in X} x^2\prob{X = x}
+	\end{align*}
+	Videre har vi også at $\sum_{x\in X}\prob{X = x} = 1$. Itillegg til at $\expected{X} = \sum_{x\in X}x\prob{X = x}$ og $\expected{X^2} = \sum_{x\in X} x^2\prob{X = x}$ som tilslutt gir oss:
+	$$
+	\expected{a + bX + cX^2} = a + b\expected{X} + c\expected{X^2}
+	$$
+	
+	\oppgave
+	\deloppgave
+	La $X$ være antall fotoner som blir produsert. Vi har at $X \sim Poisson(\lambda)$ hvor $\lambda = 0.2$. Siden $X$ er poissonfordelt har vi også at sannsynlighetstettheten til $X$ er gitt ved
+	$$
+	\prob{X = x} = \frac{\left(\lambda t\right)^x}{x!}e^{-\lambda t}
+	$$
+	Vi skal finne $P(X > 12) = 1 - P(X \leq 12)$. Slår vi opp i tabellen\tabell{20} får vi at $P(X\leq 12) = 0.7916$. Dette gir oss $P(X > 12) = 0.2084$.
+	
+	\deloppgave
+	For en poissonfordeling har vi at $\expected{X} = \var{X}$. Dette gir at $\sigma = \sqrt{\lambda t}$ der $t = 50$. Så, standardavviket til $X$ iløpet av $50$ns er $\sigma \approx 3.2$.
+	
+	\deloppgave
+	Ventetiden $T$ er eksponentialfordelt og har derfor sannsynlighetstettheten
+	$$
+	\prob{T = t} = \lambda e^{-\lambda x}
+	$$
+	Vi skal nå finne $\prob{T > 10} = 1 - \prob{T \leq 10}$. Vi har da at
+	$$
+	\prob{T \leq 10} = \lambda\int_{0}^{10} e^{-\lambda t} \dd t= \left. -e^{-\lambda t}\right|_{0}^{10} = 1 - e^{-2}
+	$$
+	Slik at $\prob{T > 10} = e^{-2} \approx 0.1353$.
+	
+	\deloppgave
+	Vi har at siden $\lambda$ er ukjent så vil også både forventningsverdien og variansen av en poissonfordeling også være ukjent. Siden $n \geq 30$ kan vi per sentralgrenseteoremet anta at målingene er normalfordelt. Vi bruker derfor en $T$-interval med de oppgitte verdiene for $\bar{x} = 8.94$, $s = 3.27$ og $n = 30$. Videre har vi $\alpha = 0.05$ og derfor fra tabellen\tabell{4} at $t_{\alpha/2}^{n-1} = 2.045$ at konfidensintervallet vårt er:
+	$$
+	\confidence{\bar{x}}{t^{n-1}}{\frac{s}{\sqrt{n}}} = [7.7191, 10.1609]
+	$$
+	
+	Videre har vi at estimatet $\hat{\lambda} = X/t$ må være forventningsrett. Vi vet også at for en poissonfordeling så er $\expected{X} = \lambda t$ slik at $\lambda = \expected{X}{t}$. Siden vi har gjennomsnittet $\bar{x}$ så kan vi estimere $\hat{lambda}$ til å være $\hat{\lambda} = \bar{x}/t = 0.1788$ ($t = 50$).
+	
+	\deloppgave
+	Vi gjennomfører hypotese-testen med en $T$-test med følgende hypoteser:
+	\begin{align}
+		H_0\colon & \mu \geq 10\\
+		H_1\colon & \mu < 10
+	\end{align}
+	Vi har fra resultatene av $\bar{x}$ og $s$ at 
+	$$
+	t = \score{\bar{x}}{10}{s/\sqrt{30}} = -1.775
+	$$
+	Fra tabellen\tabell{4} har vi at $t_{\alpha}^{n-1} = 2.462$. Siden $t > -t_{\alpha}^{n-1}$ så har vi ikke tilstrekkelig med grunnlag for å forkaste $H_0$. Altså, forskeren har ikke tilstrekkelig bevis for at  forventet antall fotoner $\mu$ som apparatet produserer i løpet av 50
+	nanosekunder er mindre enn 10.
+	
+	\oppgave
+	\deloppgave
+	Egenverdiene til matrisen $A$ er løsningene til den karakteristiske likningen $\det(A - \lambda I) = \lambda^2 - 5\lambda = \lambda(\lambda - 5) = 0$. Egenverdiene til $A$ er derfor $\lambda_1 = 0$ og $\lambda_2 = 5$. 
+	
+	Egenvektorene til $A$ finner vi ved å løse $A - \lambda I = 0$ for $\lambda = \lambda_1$ og $\lambda = \lambda_2$.
+	
+	La $\lambda = \lambda_1$ da har vi at
+	$$
+	\begin{pmatrix}
+		4 & -2\\
+		-2 & 1
+	\end{pmatrix} \sim
+	\begin{pmatrix}
+		2 & -1\\
+		0 & 0
+	\end{pmatrix}
+	$$
+	som gir oss egenvektoren $\vec{v}_1 = (1, 2)$. 
+	
+	Tilsvarende for $\lambda = \lambda_2$ har vi at
+	$$
+	\begin{pmatrix}
+		-1 & -2\\
+		-2 & -4
+	\end{pmatrix}\sim
+	\begin{pmatrix}
+		1 & 2\\
+		0 & 0
+	\end{pmatrix}
+	$$
+	som gir oss egenvektoren $\vec{v}_2 = (-2, 1)$
+	
+	\deloppgave
+	Med resultatene vi har fra forrige oppgave har vi at matrisen $D$ er gitt ved
+	$$
+	D = \begin{pmatrix}
+		0 & 0\\
+		0 & 5
+	\end{pmatrix}
+	$$
+	og matrisen $P$
+	$$
+	P = \begin{pmatrix}
+		1 & -2\\
+		2 & 1
+	\end{pmatrix}
+	\implies
+	P\inverse = \frac{1}{5}\begin{pmatrix}
+		1 & 2\\
+		-2 & 1
+	\end{pmatrix}
+	$$
+	Vi kan derfor uttrykke $A$ som $A = PDP\inverse$.
+	
+	\deloppgave
+	La $\vec{x}(t) = (x(t), y(t))$. Da har vi at systemet av differensiallikninger oppgitt i oppgaven kan uttrykkes som $\vec{x}'(t) = A\vec{x}(t)$. Dette har da den generelle løsningen
+	$$
+	\vec{x}(t) = c_1\begin{pmatrix}
+		1\\2
+	\end{pmatrix} + c_2\begin{pmatrix}
+	-2\\1
+	\end{pmatrix}e^{5t}
+	$$
+	Ved initialbetingelsen $\vec{x}(0) = (0, 1)$ har vi at den partikulære løsningen $\vec{x}_p(t)$ er $\vec{x}(t)$ gitt ovenfor der $c_1$ og $c_2$ er
+	$$
+	\begin{pmatrix}
+		c_1\\c_2
+	\end{pmatrix}
+	= P\inverse \begin{pmatrix}
+		0\\1
+	\end{pmatrix} = \frac{1}{5}\begin{pmatrix}
+	1 & 2\\
+	-2 & 1
+	\end{pmatrix}\begin{pmatrix}
+	0\\1
+	\end{pmatrix} = \frac{1}{5}\begin{pmatrix}
+	2\\1
+	\end{pmatrix}
+	$$
+	Den partikulære løsningen for differensiallikningen som tilfredstiller initialbetingelsen er derfor
+	$$
+	\vec{x}_p(t) = \frac{2}{5}\begin{pmatrix}
+		1\\2
+	\end{pmatrix} + \frac{1}{5}\begin{pmatrix}
+		-2\\1
+	\end{pmatrix}e^{5t}
+	$$
+	
+	\oppgave
+	\deloppgave
+	Siden $\ln(1) = 0$ så kan vi se bort ifra første leddet i taylor-rekken. Det vil si at vi evaluerer summen mellom $1$ og $\infty$ for denne rekken. Videre har vi at
+	\begin{align*}
+		f^{(1)}(x) &= \frac{1}{x} \implies f^{(1)}(1) = 1\\
+		f^{(2)}(x) &= -\frac{1}{x^2} \implies f^{(2)}(1) = -1\\
+		f^{(3)}(x) &= \frac{2}{x^3} \implies f^{(3)}(1) = 2\\
+		f^{(4)}(x) &= -\frac{6}{x^4} \implies f^{(4)}(1) = -6\\
+		&\vdots\\
+		f^{(n)}(x) &= \left(-1\right)^{n+1}\frac{1}{x^{n}} \implies f^{(n)}(1) = \left(-1\right)^{n+1}(n-1)!
+	\end{align*}
+	Dette gir at
+	$$
+	\sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}(n-1)!}{n!}(x-1)^n = \sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}}{n}(x-1)^n
+	$$
+	
+	\deloppgave
+	Konvergensradien $R$ for an potensrekke gitt som $\sum b_n(x - c)^n$ er gitt ved
+	$$
+	R \equiv \lim_{n\to\infty}\left|\frac{b_n}{b_{n+1}}\right|
+	$$
+	Konvergensradien $R$ til rekken oppgitt er derfor
+	\begin{align*}
+	R &= \lim_{n\to\infty}\left|\frac{\left(-1\right)^{n+1}}{n}\cdot\frac{n+1}{(-1)\left(-1\right)^{n+1}}\right|\\
+	&= \lim_{n\to\infty}\frac{n+1}{n} \\
+	&= \lim_{n\to\infty}1 + \frac{1}{n} = 1
+	\end{align*}
+	Siden $R = 1$ så vet vi at rekken konvergerer absolutt når $|x - c| < R$ med andre ord $c - R < x < c + R$. Med $c = 1$. Så da har vi at rekken oppgitt konvergerer absolutt når $0 < x < 2$.
+	
+	\deloppgave
+	Hvis vi nå lar $x = 2$ så har vi at
+	$$
+	\sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}}{n}(x-1)^n = \sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}}{n}(1)^n = \sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}}{n}
+	$$
+	Her kan vi sjekke konvergens til rekken ved å bruke Dirichlet's test. La $b_n = (-1)^{n+1}$ Da har vi at $\left|\sum_{n = 1}^N b_n\right| \leq 1$ for alle $N$. La videre $a_n = 1/n$ da har vi at $a_n \geq 0$ for alle $n\in\mathbb N$. Vi har også at $a_{n+1} \leq a_n$ og at $\lim_{n\to\infty} a_n = 0$. Siden alle kravene er tilfredstilt så sier Dirichlet's test så konvergerer rekken $\sum_{n = 1}^\infty b_na_n$ konvergerer. Altså rekken
+	$$
+	\sum_{n = 1}^\infty \frac{\left(-1\right)^{n+1}}{n}(x-1)^n
+	$$
+	konvergerer når $x = 2$.
+	
+	\deloppgave
+	Vi har fra den geometriske rekken at
+	$$
+	\frac{1}{1 - r} = \sum_{n = 0}^\infty r^n
+	$$
+	når $|r| < 1$. La nå $r = 1 - x$ da har vi at
+	$$
+	\frac{1}{x} = \sum_{n = 0}^\infty (1 - x)^n
+	$$
+	Integrerer vi på begge sider får vi
+	$$
+	\ln{x} = \sum_{n = 0}^\infty \frac{-1}{n+1}(1 - x)^{n+1}
+	$$
+	Videre har vi at $(1 - x)^{n+1} = (-1)^{n+1}(x - 1)^{n+1}$ slik at vi får
+	$$
+	\ln{x} = \sum_{n = 0}^\infty \frac{(-1)^{n+2}}{n+1}(x - 1)^{n+1}
+	$$
+	Lar vi nå summen gå fra $n = 1$ istedenfor $n = 0$ så har vi at
+	$$
+	\ln(x) = \sum_{n = 1}^\infty \frac{(-1)^{n+1}}{n}(x - 1)^{n}
+	$$
+	
+	\oppgave
+	La $\vec{r} = (x, y)$ da vil tangenten til nivåkurven $g(\vec{r}) = 9$ i punktet $\vec{r}_0 = (2, 1)$ være gitt ved
+	$$
+	\nabla g(\vec{r}_0)\cdot \vec{r} = \nabla g(\vec{r})\cdot \vec{r}_0
+	$$
+	Med
+	$$
+	\pdiff[g]{x} = 4x \qquad \text{og} \qquad \pdiff[g]{y} = 2y
+	$$
+	Så har vi at $\nabla g(\vec{r}_0) = (8, 2)$. Dette gir oss tangenten $8x + 2y = 18$ som kan forenkles til $4x + y = 9$.
 \end{document}
