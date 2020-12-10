@@ -1,6 +1,20 @@
-function zTest(x, mu, variance, alpha)
+function zTest(x, mu, variance, alpha, opt_n)
     x = mean(x);
-    n = size(sample, 2);
+    
+    if exist('opt_n', 'var')
+        if size(x, 2) > 1
+            error('Invalid input for x')
+        else
+            n = opt_n;
+        end
+    else
+        if size(x, 2) == 1
+            error('invalid input for x')
+        else
+            n = size(x, 2);
+        end
+    end
+    
     z = (x - mu)/sqrt(variance/n);
     z = round(1000*z)/1000;
     

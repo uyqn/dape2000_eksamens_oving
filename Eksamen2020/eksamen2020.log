@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  9 DEC 2020 18:18
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6730 64-bit) (preloaded format=xelatex 2018.9.15)  10 DEC 2020 08:26
 entering extended mode
 **./eksamen2020.tex
 (eksamen2020.tex
@@ -265,50 +265,58 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 ) (eksamen2020.aux)
 \openout1 = `eksamen2020.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 90.
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 89.
-LaTeX Font Info:    Try loading font information for U+msa on input line 90.
+(lastpage)             ! on input line 90.
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
 
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 ("C:\Users\uyngu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] 
 AED: lastpage setting LastPage
-(eksamen2020.aux) ) 
-Here is how much of TeX's memory you used:
- 3032 strings out of 427798
- 37639 string characters out of 3147828
- 109938 words of memory out of 3000000
- 7017 multiletter control sequences out of 15000+200000
- 15260 words of font info for 29 fonts, out of 3000000 for 9000
- 1328 hyphenation exceptions out of 8191
- 27i,6n,43p,229b,188s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on eksamen2020.pdf (1 page).
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+] (eksamen2020.aux) ) 
+Here is how much of TeX's memory you used:
+ 3036 strings out of 427798
+ 37686 string characters out of 3147828
+ 109938 words of memory out of 3000000
+ 7020 multiletter control sequences out of 15000+200000
+ 21273 words of font info for 31 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 27i,10n,43p,229b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on eksamen2020.pdf (2 pages).
